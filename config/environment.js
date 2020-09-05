@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'designmonster',
+    modulePrefix: 'ember-octane-boilerplate',
     environment,
     rootURL: '/',
     locationType: 'auto',

@@ -1,5 +1,5 @@
-import Application from 'designmonster/app';
-import config from 'designmonster/config/environment';
+import Application from 'ember-octane-boilerplate/app';
+import config from 'ember-octane-boilerplate/config/environment';
 import { setApplication } from '@ember/test-helpers';
 import { start } from 'ember-qunit';
 

@@ -1,1 +1,22 @@
-<Structural::ExampleComponent />
+<Structural::ExampleParentComponent />
+<br>
+<br>
+This is the Index Route Template.  It is being used to illustrate how I structure my app.  In this template, I pass in data from the route.js file for the index route (or whatever route you're in) - I like to use the route template ONLY to call structural components and pass them the data that they need to render their child components.  So in this file, Structural::ExampleParentComponent is what will be displayed.
+<br>
+<br>
+Ember-Responsive examples:
+<br>
+<br>
+Below are examples on how you would use the add-on ember-responsive to render content based on JS media Queries
+<br>
+<br>
+{{#if (media 'isSmall')}}
+  **SMALL** this is content rendered on SMALL JS media Queries **SMALL**
+{{else if (media 'isMedium')}}
+  **MEDIUM** this is content rendered on MEDIUM JS media Queries **MEDIUM**
+{{else if (media 'isLarge')}}
+  **LARGE** this is content rendered on LARGE JS media Queries **LARGE**
+{{else if (media 'isWide')}}
+  **WIDE** this is content rendered on WIDE JS media Queries **WIDE**
+{{/if}}
+

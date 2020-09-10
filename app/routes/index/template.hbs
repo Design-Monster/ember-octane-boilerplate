@@ -1,13 +1,19 @@
-<Structural::ExampleParentComponent />
+<Structural::Home />
 <br>
+This is the Index Route Template.  It is being used to illustrate how I structure my app.  In the route template, I pass in data from the route.js file for the index route (or whatever route you're in) - I like to use the route template ONLY to call structural components (such as Home) and pass them the data that they need to render their child components.  So in this file, Structural::Home is what will be displayed (because this is the home route or index route) which would hold a stack of dynamic components.  Dynamic components are things like UI parts, menus, etc.
 <br>
-This is the Index Route Template.  It is being used to illustrate how I structure my app.  In this template, I pass in data from the route.js file for the index route (or whatever route you're in) - I like to use the route template ONLY to call structural components and pass them the data that they need to render their child components.  So in this file, Structural::ExampleParentComponent is what will be displayed.
+So, the structure goes like this:
+<br>
+Route (Example - Index) which holds:
+<br>
+Structural Component (Example - Home) which holds:
+<br>
+Dynamic Components in a stack, which make up what the user sees on the page.
 <br>
 <br>
 Ember-Responsive examples:
 <br>
-<br>
-Below are examples on how you would use the add-on ember-responsive to render content based on JS media Queries
+Below are examples on how you would use the add-on ember-responsive to render content based on JS media Queries.  You can watch the content change as you change the screen size.
 <br>
 <br>
 {{#if (media 'isSmall')}}

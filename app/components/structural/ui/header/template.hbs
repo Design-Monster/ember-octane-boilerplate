@@ -1,0 +1,9 @@
+
+{{#if (media 'isSmall')}}
+  <Dynamic::Ui::MobileMenu />
+{{/if}}
+{{#if (or (media 'isMedium') (media 'isLarge') (media 'isWide'))}}
+  <Dynamic::Ui::DesktopMenu />
+{{/if}}
+
+

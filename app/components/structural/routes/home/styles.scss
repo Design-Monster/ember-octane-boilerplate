@@ -41,11 +41,15 @@
       }
 
       @include breakpoint(small) {
-        align-items: center;      
+        height: calc(50vh - 80px);
+        max-height: calc(50vh - 80px);
+        align-items: center;     
       }
 
       @include breakpoint(medium) {
-        align-items: center;      
+        height: calc(50vh - 80px);
+        max-height: calc(50vh - 80px);
+        align-items: center;     
       }
 
       @include breakpoint(large) {
@@ -85,25 +89,29 @@
         }
 
         @include breakpoint(small) {
-          min-height: 100px;
-          max-height: 100px;
+          min-width: calc(100vw - 10px);
+          max-width: calc(100vw - 10px);
+          height: 100%;
+          max-height: 100%;
         }
 
         @include breakpoint(medium) {
-          min-height: 100px;
-          max-height: 100px;
+          min-width: calc(100vw - 10px);
+          max-width: calc(100vw - 10px);
+          height: 100%;
+          max-height: 100%;
         }
 
         @include breakpoint(large) {
-          min-width: 45vw;
-          max-width: 45vw;
+          min-width: calc(50vw - 10px);
+          max-width: calc(50vw - 10px);
           height: calc(50vh - 90px);
           max-height: calc(50vh - 90px);
         }
 
         @include breakpoint(wide) {
-          min-width: 45vw;
-          max-width: 45vw;
+          min-width: calc(50vw - 10px);
+          max-width: calc(50vw - 10px);
           height: calc(50vh - 90px);
           max-height: calc(50vh - 90px);
         }

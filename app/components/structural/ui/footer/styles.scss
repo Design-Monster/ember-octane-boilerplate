@@ -1,11 +1,8 @@
 @import 'global/variables';
 @import 'global/breakpoints';
 
-//css goes here
-.header {
+.footer {
   display: flex;
-  flex: 1;
-  text-align: center;
   align-items: center;
   justify-content: center;
 }

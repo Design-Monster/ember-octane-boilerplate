@@ -16,7 +16,7 @@
     min-height: 75px;
     max-height: 75px;
     flex: 1;
-    border-bottom: 1px solid $color_black;
+    border-bottom: $border_base;
     align-items: center;
     justify-content: center;
   }
@@ -33,11 +33,11 @@
       justify-content: center;
 
       &.top {
-        margin-top: 5px;
+        margin: $margin_extra_small 0 0;
       }
 
       &.bottom {
-        margin-bottom: 5px;
+        margin: 0 0 $margin_extra_small;
       }
 
       @include breakpoint(small) {
@@ -62,10 +62,8 @@
 
       .home_content {
         display: flex;
-        min-width: 90vw;
-        max-width: 90vw;
         flex: 1;
-        margin: 5px;
+        margin: $margin_extra_small;
         overflow-y: scroll;
         text-align: center;
         border-radius: 8px;
@@ -89,29 +87,25 @@
         }
 
         @include breakpoint(small) {
-          min-width: calc(100vw - 10px);
-          max-width: calc(100vw - 10px);
-          height: 100%;
-          max-height: 100%;
+          min-width: calc(100vw - #{$margin_small});
+          max-width: calc(100vw - #{$margin_small});
         }
 
         @include breakpoint(medium) {
-          min-width: calc(100vw - 10px);
-          max-width: calc(100vw - 10px);
-          height: 100%;
-          max-height: 100%;
+          min-width: calc(100vw - #{$margin_small});
+          max-width: calc(100vw - #{$margin_small});
         }
 
         @include breakpoint(large) {
-          min-width: calc(50vw - 10px);
-          max-width: calc(50vw - 10px);
+          min-width: calc(50vw - #{$margin_medium});
+          max-width: calc(50vw - #{$margin_medium});
           height: calc(50vh - 90px);
           max-height: calc(50vh - 90px);
         }
 
         @include breakpoint(wide) {
-          min-width: calc(50vw - 10px);
-          max-width: calc(50vw - 10px);
+          min-width: calc(50vw - #{$margin_medium});
+          max-width: calc(50vw - #{$margin_medium});
           height: calc(50vh - 90px);
           max-height: calc(50vh - 90px);
         }
@@ -128,7 +122,7 @@
     min-height: 75px;
     max-height: 75px;
     flex: 1;
-    border-top: 1px solid $color_black;
+    border-top: $border_base;
     align-items: center;
     justify-content: center;
   }

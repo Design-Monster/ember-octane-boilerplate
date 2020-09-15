@@ -1,3 +1,8 @@
+//Sizes
+$size_extra_small: 0.390625rem; //6.25px
+$size_small: 0.78125rem; //12.5px
+$size_medium: 1.5625rem; //25px
+$size_large: 3.125rem; //50px
 
 //Colors
 $color_white: #ffffff;
@@ -23,9 +28,18 @@ $border_base_color_alternate: $color_grey_45;
 $border_base_width: 1px;
 $border_base: solid $border_base_width $border_base_color;
 $border_base_alternate: solid $border_base_width $border_base_color_alternate;
-$border_radius_base: 3px;
+
+//Borders Radius
+$border_radius_small: 3px;
+$border_radius_medium: 8px;
 
 //Buttons
 $button_height_base: 2.75;
 $button_height_base_mini: 2;
 $button_padding_base: 0;
+
+//Margins
+$margin_extra_small: $size_extra_small;
+$margin_small: $size_small;
+$margin_medium: $size_medium;
+$margin_large: $size_large;

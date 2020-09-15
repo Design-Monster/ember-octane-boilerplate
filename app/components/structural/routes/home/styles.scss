@@ -33,6 +33,14 @@
   div {
     margin: auto;
   }
+
+  @include breakpoint(small) {
+    min-height: $small_height;  
+  }
+
+  @include breakpoint(medium) {
+    min-height: $small_height;
+  }
 }
 
 // This is where your sizing should go for the layout of your component.  Try not to put and specific sizing into the lower level, structural components.  Keep any layout sizing in these higher level, route components.  For example:
@@ -40,13 +48,20 @@
 .home_component_container {
   display: flex;
   min-height: 100vh;
-  max-height: 100vh;
   flex-direction: column;
+
+  @include breakpoint(large) {
+    max-height: 100vh;
+  }
+
+  @include breakpoint(wide) {
+    max-height: 100vh;
+  }
 
   .home_header_container {
     display: flex;
-    min-height: 75px;
-    max-height: 75px;
+    min-height: $small_height;
+    max-height: $small_height;
     flex: 1;
     border-bottom: $border_base;
     align-items: center;
@@ -58,8 +73,15 @@
     flex: 1;
     flex-direction: column;
 
-    .home_content {
-      @include content_block();
+    .home_content_column {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      margin: $margin_extra_small;
+
+      .home_content {
+        @include content_block();
+      }
     }
 
     .home_content_row {

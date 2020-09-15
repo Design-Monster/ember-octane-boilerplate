@@ -3,6 +3,7 @@ $size_extra_small: 0.390625rem; //6.25px
 $size_small: 0.78125rem; //12.5px
 $size_medium: 1.5625rem; //25px
 $size_large: 3.125rem; //50px
+$size_extra_large: 4.6875rem; //75px
 
 //Colors
 $color_white: #ffffff;
@@ -49,3 +50,6 @@ $padding_extra_small: $size_extra_small;
 $padding_small: $size_small;
 $padding_medium: $size_medium;
 $padding_large: $size_large;
+
+//Heights
+$small_height: $size_extra_large;

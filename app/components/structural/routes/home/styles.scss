@@ -3,6 +3,37 @@
 
 //css goes here
 
+@mixin content_block {
+  display: flex;
+  flex: 1 1 0;
+  margin: $margin_extra_small;
+  overflow-y: scroll;
+  text-align: center;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+
+  &.blue {
+    background-color: $color_blue;
+  }
+
+  &.royal_purple {
+    background-color: $color_royal_purple;
+  }
+
+  &.purple {
+    background-color: $color_purple;
+  }
+
+  &.orange {
+    background-color: $color_orange;
+  }
+
+  div {
+    margin: auto;
+  }
+}
+
 // This is where your sizing should go for the layout of your component.  Try not to put and specific sizing into the lower level, structural components.  Keep any layout sizing in these higher level, route components.  For example:
 
 .home_component_container {
@@ -26,30 +57,23 @@
     flex: 1;
     flex-direction: column;
 
+    .home_content {
+      @include content_block();
+    }
+
     .home_content_row {
       display: flex;
+      min-height: calc(50vh - 75px);
+      max-height: calc(50vh - 75px);
       flex: 1;
       flex-direction: column;
-      justify-content: center;
 
       &.top {
-        margin: $margin_extra_small 0 0;
+        margin: $margin_extra_small $margin_extra_small 0;
       }
 
       &.bottom {
-        margin: 0 0 $margin_extra_small;
-      }
-
-      @include breakpoint(small) {
-        height: calc(50vh - 80px);
-        max-height: calc(50vh - 80px);
-        align-items: center;     
-      }
-
-      @include breakpoint(medium) {
-        height: calc(50vh - 80px);
-        max-height: calc(50vh - 80px);
-        align-items: center;     
+        margin: 0 $margin_extra_small $margin_extra_small;
       }
 
       @include breakpoint(large) {
@@ -61,58 +85,7 @@
       }
 
       .home_content {
-        display: flex;
-        flex: 1;
-        margin: $margin_extra_small;
-        overflow-y: scroll;
-        text-align: center;
-        border-radius: 8px;
-        align-items: center;
-        justify-content: center;
-
-        &.blue {
-          background-color: $color_blue;
-        }
-
-        &.royal_purple {
-          background-color: $color_royal_purple;
-        }
-
-        &.purple {
-          background-color: $color_purple;
-        }
-
-        &.orange {
-          background-color: $color_orange;
-        }
-
-        @include breakpoint(small) {
-          min-width: calc(100vw - #{$margin_small});
-          max-width: calc(100vw - #{$margin_small});
-        }
-
-        @include breakpoint(medium) {
-          min-width: calc(100vw - #{$margin_small});
-          max-width: calc(100vw - #{$margin_small});
-        }
-
-        @include breakpoint(large) {
-          min-width: calc(50vw - #{$margin_medium});
-          max-width: calc(50vw - #{$margin_medium});
-          height: calc(50vh - 90px);
-          max-height: calc(50vh - 90px);
-        }
-
-        @include breakpoint(wide) {
-          min-width: calc(50vw - #{$margin_medium});
-          max-width: calc(50vw - #{$margin_medium});
-          height: calc(50vh - 90px);
-          max-height: calc(50vh - 90px);
-        }
-
-        div {
-          margin: auto;
-        }
+        @include content_block();
       }
     }
   }
@@ -127,5 +100,3 @@
     justify-content: center;
   }
 }
-
-// This layout will give you a landing page that is always 100% height of the display it is being viewed on.  But say, for example, that you want a header and a footer to be 75px in height each.  You COULD tell the footer or header component itself to be 75 px. But if you keep your home_footer_container to 75px and let the footer grow to the size of its parent, the home_footer_container, the component isn't in charge of sizing itself.

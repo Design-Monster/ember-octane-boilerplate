@@ -73,23 +73,22 @@
     flex: 1;
     flex-direction: column;
 
-    .home_content_column {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      margin: $margin_extra_small;
-
-      .home_content {
-        @include content_block();
-      }
-    }
-
     .home_content_row {
       display: flex;
-      min-height: calc(50vh - 75px);
-      max-height: calc(50vh - 75px);
       flex: 1;
       flex-direction: column;
+
+      @include breakpoint(large) {
+        min-height: calc(50vh - #{$size_extra_large} - 7.25px);
+        max-height: calc(50vh - #{$size_extra_large} - 7.25px);
+        flex-direction: row;
+      }
+
+      @include breakpoint(wide) {
+        min-height: calc(50vh - #{$size_extra_large} - 7.25px);
+        max-height: calc(50vh - #{$size_extra_large} - 7.25px);
+        flex-direction: row;
+      }
 
       &.top {
         margin: $margin_extra_small $margin_extra_small 0;
@@ -97,14 +96,6 @@
 
       &.bottom {
         margin: 0 $margin_extra_small $margin_extra_small;
-      }
-
-      @include breakpoint(large) {
-        flex-direction: row;
-      }
-
-      @include breakpoint(wide) {
-        flex-direction: row;
       }
 
       .home_content {

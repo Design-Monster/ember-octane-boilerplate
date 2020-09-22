@@ -79,14 +79,14 @@
       flex-direction: column;
 
       @include breakpoint(large) {
-        min-height: calc(50vh - #{$size_extra_large} - 7.25px);
-        max-height: calc(50vh - #{$size_extra_large} - 7.25px);
+        min-height: calc(50vh - #{$size_extra_large} - #{$border_base_width} - #{$margin_extra_small});
+        max-height: calc(50vh - #{$size_extra_large} - #{$border_base_width} - #{$margin_extra_small});
         flex-direction: row;
       }
 
       @include breakpoint(wide) {
-        min-height: calc(50vh - #{$size_extra_large} - 7.25px);
-        max-height: calc(50vh - #{$size_extra_large} - 7.25px);
+        min-height: calc(50vh - #{$size_extra_large} - #{$border_base_width} - #{$margin_extra_small});
+        max-height: calc(50vh - #{$size_extra_large} - #{$border_base_width} - #{$margin_extra_small});
         flex-direction: row;
       }
 

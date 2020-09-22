@@ -1,67 +1,25 @@
 @import 'global/variables';
 @import 'global/breakpoints';
 
-//css goes here
-
-@mixin content_block {
-  display: flex;
-  flex: 1 1 0;
-  padding: $padding_extra_small;
-  margin: $margin_extra_small;
-  overflow-y: scroll;
-  text-align: center;
-  border-radius: 8px;
-  align-items: center;
-  justify-content: center;
-
-  &.blue {
-    background-color: $color_blue;
-  }
-
-  &.royal_purple {
-    background-color: $color_royal_purple;
-  }
-
-  &.purple {
-    background-color: $color_purple;
-  }
-
-  &.orange {
-    background-color: $color_orange;
-  }
-
-  div {
-    margin: auto;
-  }
-
-  @include breakpoint(small) {
-    min-height: $small_height;  
-  }
-
-  @include breakpoint(medium) {
-    min-height: $small_height;
-  }
-}
-
-// This is where your sizing should go for the layout of your component.  Try not to put and specific sizing into the lower level, structural components.  Keep any layout sizing in these higher level, route components.  For example:
-
 .home_component_container {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 
   @include breakpoint(large) {
+    min-height: 100vh;
     max-height: 100vh;
   }
 
   @include breakpoint(wide) {
+    min-height: 100vh;
     max-height: 100vh;
   }
 
   .home_header_container {
     display: flex;
-    min-height: $small_height;
-    max-height: $small_height;
+    min-height: calc(#{$small_height} - #{$border_base_width});
+    max-height: calc(#{$small_height} - #{$border_base_width});
     flex: 1;
     border-bottom: $border_base;
     align-items: center;
@@ -79,14 +37,14 @@
       flex-direction: column;
 
       @include breakpoint(large) {
-        min-height: calc(50vh - #{$size_extra_large} - #{$border_base_width} - #{$margin_extra_small});
-        max-height: calc(50vh - #{$size_extra_large} - #{$border_base_width} - #{$margin_extra_small});
+        min-height: calc(50vh - #{$size_extra_large} - #{$margin_extra_small});
+        max-height: calc(50vh - #{$size_extra_large} - #{$margin_extra_small});
         flex-direction: row;
       }
 
       @include breakpoint(wide) {
-        min-height: calc(50vh - #{$size_extra_large} - #{$border_base_width} - #{$margin_extra_small});
-        max-height: calc(50vh - #{$size_extra_large} - #{$border_base_width} - #{$margin_extra_small});
+        min-height: calc(50vh - #{$size_extra_large} - #{$margin_extra_small});
+        max-height: calc(50vh - #{$size_extra_large} - #{$margin_extra_small});
         flex-direction: row;
       }
 
@@ -99,15 +57,53 @@
       }
 
       .home_content {
-        @include content_block();
+        display: flex;
+        flex: 1 1 0;
+        padding: $padding_extra_small;
+        margin: $margin_extra_small;
+        overflow-y: scroll;
+        text-align: center;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint(small) {
+          min-height: $small_height;
+          max-height: $small_height;  
+        }
+
+        @include breakpoint(medium) {
+          min-height: $small_height;
+          max-height: $small_height;  
+        }
+
+        &.blue {
+          background-color: $color_blue;
+        }
+
+        &.royal_purple {
+          background-color: $color_royal_purple;
+        }
+
+        &.purple {
+          background-color: $color_purple;
+        }
+
+        &.orange {
+          background-color: $color_orange;
+        }
+
+        div {
+          margin: auto;
+        }
       }
     }
   }
 
   .home_footer_container {
     display: flex;
-    min-height: 75px;
-    max-height: 75px;
+    min-height: calc(#{$small_height} - #{$border_base_width});
+    max-height: calc(#{$small_height} - #{$border_base_width});
     flex: 1;
     border-top: $border_base;
     align-items: center;

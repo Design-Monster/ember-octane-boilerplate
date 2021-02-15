@@ -2,19 +2,17 @@
 $size_extra_small: 0.390625rem; //6.25px
 $size_small: 0.78125rem; //12.5px
 $size_medium: 1.5625rem; //25px
+$size_half_of_extra_large: 2.34375rem;
 $size_large: 3.125rem; //50px
 $size_extra_large: 4.6875rem; //75px
+$size_extra_extra_large: 6.25rem; //100px
+$size_wide: 12.5rem;  //200px
 
 //Colors
 $color_white: #ffffff;
 $color_almost_white: #fafafa;
-$color_ghost_white: #f8f8ff;
-$color_grey_30: #4d4d4d;
-$color_grey_45: #b3b3b3;
-$color_grey: #f7f7f7;
-$color_grey_72: #b8b8b8;
-$color_grey_86: #dbdbdb;
-$color_grey_94: #f0f0f0;
+$color_light_grey: #f0f0f0;
+$color_dark_grey: darken($color_light_grey, 50%);
 $color_black: #000000;
 $color_orange: #ff4f00;
 $color_blue: #05386b;
@@ -22,34 +20,61 @@ $color_royal_purple: #25274d;
 $color_purple: lighten($color_royal_purple, 10%);
 $color_stone_blue: #336b87;
 $color_pebble_blue: lighten($color_stone_blue, 50%);
+$color_yellow: #fffe80;
+$color_green: #68a823;
+$color_red: #f93b30;
 
 //Borders
-$border_base_color: $color_black;
-$border_base_color_alternate: $color_grey_45;
-$border_base_width: 1px;
-$border_base: solid $border_base_width $border_base_color;
-$border_base_alternate: solid $border_base_width $border_base_color_alternate;
+$border_one_color: $color_pebble_blue;
+$border_two_color: $color_light_grey;
+$border_one_thickness: 3px;
+$border_two_thickness: 1px;
+
+$border_one: solid $border_one_thickness $border_one_color;
+$border_two: solid $border_two_thickness $border_two_color;
 
 //Borders Radius
 $border_radius_small: 3px;
 $border_radius_medium: 8px;
 
 //Buttons
-$button_height_base: 2.75;
-$button_height_base_mini: 2;
-$button_padding_base: 0;
+$button_height_primary: $size_large;
+$button_width_primary: $size_extra_extra_large;
+$button_width_wide: $size_wide;
+$button_background_color_primary: $color_white;
+$button_background_color_hover: $color_stone_blue;
+$button_font_color_primary: $color_blue;
+$button_font_color_hover: $color_white;
+$button_font_size_primary: 1em;
+$button_box_shadow_primary: 0 2px 12px $color_stone_blue;
+$button_box_shadow_hover: 0 5px 12px $color_stone_blue;
+$button_border_radius_primary: 0.5em;
+
 
 //Margins
-$margin_extra_small: $size_extra_small;
-$margin_small: $size_small;
+$margin_extra_small: $size_extra_small; //base margin for spacing between edges
+$margin_small: $size_small;  //this is what I use for the left margin on all text
 $margin_medium: $size_medium;
 $margin_large: $size_large;
+$margin_extra_large: $size_extra_large;
 
 //Padding
-$padding_extra_small: $size_extra_small;
+$padding_extra_small: $size_extra_small;  
 $padding_small: $size_small;
 $padding_medium: $size_medium;
 $padding_large: $size_large;
 
 //Heights
-$small_height: $size_extra_large;
+$height_medium: $size_medium;
+$height_half_of_extra_large: $size_half_of_extra_large;
+$height_large: $size_large;
+$height_extra_large: $size_extra_large;
+$height_extra_extra_large: $size_extra_extra_large;
+
+//font-sizes
+$font_size_tiny: 0.5em; //8px
+$font_size_regular: 1em; //16px
+$font_size_medium: 1.25em; //20px
+$font_size_large: 1.5em;  //24px
+$font_size_extra_large: 2em; //32px
+$font_size_extra_extra_large: 3em; //48px

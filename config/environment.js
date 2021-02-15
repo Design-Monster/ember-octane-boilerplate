@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'ember-octane-boilerplate',
     environment,
     rootURL: '/',
+    historySupportMiddleware: true,
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

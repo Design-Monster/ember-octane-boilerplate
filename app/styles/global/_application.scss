@@ -8,18 +8,3 @@ body {
 	min-height: 100%;
 	margin: 0;
 }
-
-.skip_link {
-	position: absolute;
-	top: -40px;
-	left: 0;
-	z-index: -100;
-	display: none;
-	padding: 8px;
-	color: $color_white;
-	background: $color_black;
-
-	:focus {
-		top: 0;
-	}
-}

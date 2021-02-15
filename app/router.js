@@ -7,5 +7,5 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  this.route('example', function() {});  //must be written this way because of nested folder structure in routes
+  this.route('example', function () {}); //must be written this way because of nested folder structure in routes
 });

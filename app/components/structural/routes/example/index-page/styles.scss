@@ -18,10 +18,10 @@
 
   .home_header_container {
     display: flex;
-    min-height: calc(#{$small_height} - #{$border_base_width});
-    max-height: calc(#{$small_height} - #{$border_base_width});
+    min-height: calc(#{$height_medium} - #{$border_one_thickness});
+    max-height: calc(#{$height_medium} - #{$border_one_thickness});
     flex: 1;
-    border-bottom: $border_base;
+    border-bottom: $border_one;
     align-items: center;
     justify-content: center;
   }
@@ -68,13 +68,13 @@
         justify-content: center;
 
         @include breakpoint(small) {
-          min-height: $small_height;
-          max-height: $small_height;  
+          min-height: $height_medium;
+          max-height: $height_medium;  
         }
 
         @include breakpoint(medium) {
-          min-height: $small_height;
-          max-height: $small_height;  
+          min-height: $height_medium;
+          max-height: $height_medium;  
         }
 
         &.blue {
@@ -102,10 +102,10 @@
 
   .home_footer_container {
     display: flex;
-    min-height: calc(#{$small_height} - #{$border_base_width});
-    max-height: calc(#{$small_height} - #{$border_base_width});
+    min-height: calc(#{$height_medium} - #{$border_one_thickness});
+    max-height: calc(#{$height_medium} - #{$border_one_thickness});
     flex: 1;
-    border-top: $border_base;
+    border-top: $border_one;
     align-items: center;
     justify-content: center;
   }

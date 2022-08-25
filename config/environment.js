@@ -5,19 +5,11 @@ module.exports = function (environment) {
     modulePrefix: 'ember-octane-boilerplate',
     environment,
     rootURL: '/',
-<<<<<<< HEAD
-    historySupportMiddleware: true,
-=======
->>>>>>> 0fd3055... v3.26.1...v4.1.1
     locationType: 'history',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
-      },
-      EXTEND_PROTOTYPES: {
-        // Prevent Ember Data from overriding Date.parse.
-        Date: false,
       },
     },
 

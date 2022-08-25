@@ -2,61 +2,37 @@
 $size_extra_small: 0.390625rem; //6.25px
 $size_small: 0.78125rem; //12.5px
 $size_medium: 1.5625rem; //25px
-$size_half_of_extra_large: 2.34375rem;
+$size_extra_medium: 2.344rem; //37.5px
 $size_large: 3.125rem; //50px
-$size_extra_large: 4.6875rem; //75px
-$size_extra_extra_large: 6.25rem; //100px
-$size_wide: 12.5rem;  //200px
+$size_xl: 4.6875rem; //75px
+$size_xxl: 6.25rem; //100px
 
 //Colors
 $color_white: #ffffff;
-$color_almost_white: #fafafa;
-$color_light_grey: #f0f0f0;
-$color_dark_grey: darken($color_light_grey, 50%);
 $color_black: #000000;
-$color_orange: #ff4f00;
-$color_blue: #05386b;
-$color_royal_purple: #25274d;
-$color_purple: lighten($color_royal_purple, 10%);
-$color_stone_blue: #336b87;
-$color_pebble_blue: lighten($color_stone_blue, 50%);
-$color_yellow: #fffe80;
-$color_green: #68a823;
-$color_red: #f93b30;
+$color_blue_primary: #0435df;
+$color_blue_secondary: lighten($color_blue_primary, 45%);
+$color_black_overlay: lighten($color_black, 15%);
+$color_blue_darkened: #03259e;
+$color_charcoal: #36454f;
+$color_light_grey: #f0f0f0;
 
 //Borders
-$border_one_color: $color_pebble_blue;
-$border_two_color: $color_light_grey;
-$border_one_thickness: 3px;
-$border_two_thickness: 1px;
-
-$border_one: solid $border_one_thickness $border_one_color;
-$border_two: solid $border_two_thickness $border_two_color;
+$border_one: solid 6px $color_blue_primary;
+$border_two: solid 1px $color_blue_secondary;
+$border_three: solid 0.8px $color_blue_primary;
+$border_four: solid 2px $color_blue_secondary;
 
 //Borders Radius
-$border_radius_small: 3px;
-$border_radius_medium: 8px;
-
-//Buttons
-$button_height_primary: $size_large;
-$button_width_primary: $size_extra_extra_large;
-$button_width_wide: $size_wide;
-$button_background_color_primary: $color_white;
-$button_background_color_hover: $color_stone_blue;
-$button_font_color_primary: $color_blue;
-$button_font_color_hover: $color_white;
-$button_font_size_primary: 1em;
-$button_box_shadow_primary: 0 2px 12px $color_stone_blue;
-$button_box_shadow_hover: 0 5px 12px $color_stone_blue;
-$button_border_radius_primary: 0.5em;
-
+$border_radius_primary: 0.5em;
 
 //Margins
-$margin_extra_small: $size_extra_small; //base margin for spacing between edges
-$margin_small: $size_small;  //this is what I use for the left margin on all text
+$margin_extra_small: $size_extra_small;
+$margin_small: $size_small;
 $margin_medium: $size_medium;
 $margin_large: $size_large;
-$margin_extra_large: $size_extra_large;
+$margin_xl: $size_xl;
+$margin_xxl: $size_xxl;
 
 //Padding
 $padding_extra_small: $size_extra_small;  
@@ -66,15 +42,29 @@ $padding_large: $size_large;
 
 //Heights
 $height_medium: $size_medium;
-$height_half_of_extra_large: $size_half_of_extra_large;
+$height_extra_medium: $size_extra_medium;
 $height_large: $size_large;
-$height_extra_large: $size_extra_large;
-$height_extra_extra_large: $size_extra_extra_large;
+$height_xl: $size_xl;
+$height_xxl: $size_xxl;
 
 //font-sizes
-$font_size_tiny: 0.5em; //8px
-$font_size_regular: 1em; //16px
-$font_size_medium: 1.25em; //20px
-$font_size_large: 1.5em;  //24px
-$font_size_extra_large: 2em; //32px
-$font_size_extra_extra_large: 3em; //48px
+$font_size_tiny: clamp(0.5em, 0.5em, 0.8749em); //8px-11.99px
+$font_size_small: clamp(0.875em, 0.875em, 0.99em); //12px-15.99px
+$font_size_regular: clamp(1em, 1em, 1.1249em); //16px-17.99px
+$font_size_medium: clamp(1.125em, 1.125em, 1.3749em); //18px-21.99px
+$font_size_extra_medium: clamp(1.375em, 1.375em, 1.49em); //22px-23.99px
+$font_size_large: clamp(1.5em, 1.5em, 1.8749em);  //24px-29.99px
+$font_size_xl: clamp(1.875em, 1.875em, 2.49em); //30px-39.99px
+$font_size_xxl: clamp(2.5em, 2.5em, 3em); //40px-48px
+
+//font colors
+$font_color_regular: $color_black;
+$font_color_inverse: $color_white;
+$font_color_primary: $color_blue_primary;
+$font_color_secondary: $color_blue_darkened;
+$font_color_charcoal: $color_charcoal;
+
+//box-shadow
+$box_shadow_primary: 1px 4px 6px $color_blue_secondary;
+$box_shadow_focused: 1px 4px 6px $color_blue_darkened;
+$box_shadow_disabled: 1px 4px 6px $color_charcoal;

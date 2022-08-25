@@ -1,0 +1,46 @@
+<div local-class="nav_menu_container">
+  {{#if @routeSlotOne}}
+  <div local-class="nav_item_container">
+    <LinkTo @route={{@routeSlotOne}} local-class="nav_link" aria-label="To Design Monster's home page">
+      <div local-class="nav_item">
+        <div local-class="nav_item_text">
+          Hello!
+        </div>
+      </div>
+    </LinkTo>
+  </div>
+  {{/if}}
+  {{#if @routeSlotTwo}}
+  <div local-class="nav_item_container">
+    <LinkTo @route={{@routeSlotTwo}} local-class="nav_link" aria-label="Learn about the services we offer">
+      <div local-class="nav_item">
+        <div local-class="nav_item_text">
+          What we do
+        </div>
+      </div>
+    </LinkTo>
+  </div>
+  {{/if}}
+  {{#if @routeSlotThree}}
+  <div local-class="nav_item_container">
+    <LinkTo @route={{@routeSlotThree}} local-class="nav_link" aria-label="Let us introduce ourselves">
+      <div local-class="nav_item">
+        <div local-class="nav_item_text">
+          Who we are
+        </div>
+      </div>
+    </LinkTo>
+  </div>
+  {{/if}}
+  {{#if @routeSlotFour}}
+  <div local-class="nav_item_container">
+    <LinkTo @route={{@routeSlotFour}} local-class="nav_link" aria-label="How to get started">
+      <div local-class="nav_item">
+        <div local-class="nav_item_text">
+          Getting started
+        </div>
+      </div>
+    </LinkTo>
+  </div>
+  {{/if}}
+</div>

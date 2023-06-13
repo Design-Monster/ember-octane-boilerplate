@@ -3,20 +3,17 @@
   {{#if (or (media 'isSmall') (media 'isMedium'))}}
   <nav local-class="wrong_url_page_mobile_navigation_container">
     <Dynamic::Ui::Navigation::Mobile 
-      @routeSlotOne={{this.aboutUsRoute}} 
-      @routeSlotTwo={{this.productsRoute}}
-      @routeSlotThree={{this.whereToBuyRoute}} 
-      @routeSlotFour={{this.processRoute}} />
+      @routeSlotOne={{this.welcomeRoute}} 
+      @routeSlotTwo={{this.servicesRoute}}
+      @routeSlotThree={{this.contactRoute}} />
   </nav>
   {{else if (or (media 'isLarge') (media 'isWide'))}}
   {{!-- template-lint-disable no-duplicate-landmark-elements --}}
   <nav local-class="wrong_url_page_desktop_navigation_container">
-    <Dynamic::Ui::Navigation::Desktop
-      @avatarImage={{this.avatarImage}}
-      @routeSlotOne={{this.aboutUsRoute}} 
-      @routeSlotTwo={{this.productsRoute}} 
-      @routeSlotThree={{this.whereToBuyRoute}}
-      @routeSlotFour={{this.processRoute}} />
+    <Dynamic::Ui::Navigation::Desktop 
+      @routeSlotOne={{this.welcomeRoute}} 
+      @routeSlotTwo={{this.servicesRoute}}
+      @routeSlotThree={{this.contactRoute}} />
   </nav>
   {{/if}}
   <div local-class="wrong_url_page_body_container">

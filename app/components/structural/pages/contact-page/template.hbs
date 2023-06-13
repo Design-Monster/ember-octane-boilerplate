@@ -1,40 +1,40 @@
 
 <Dynamic::Ui::Navigation::Skip-Link />
-<div local-class="visit_page">
-  <header local-class="visit_page_header_container">
+<div local-class="contact_page">
+  <header local-class="contact_page_header_container">
     <Dynamic::Ui::Header />
       {{#if (or (media 'isLarge') (media 'isWide'))}}
-      <nav local-class="visit_page_desktop_navigation_container">
-        <div local-class="visit_page_desktop_navigation">
+      <nav local-class="contact_page_desktop_navigation_container">
+        <div local-class="contact_page_desktop_navigation">
         <Dynamic::Ui::Navigation::Desktop 
           @routeSlotOne={{this.welcomeRoute}} 
           @routeSlotTwo={{this.servicesRoute}}
-          @routeSlotThree={{this.visitRoute}} 
+          @routeSlotThree={{this.contactRoute}} 
           @routeSlotFour={{this.aboutRoute}} />
         </div>
       </nav>
       {{/if}}
   </header>
-  <div local-class="visit_page_body">
-    <main local-class="visit_page_content_container">
-      <div local-class="visit_page_content">
+  <div local-class="contact_page_body">
+    <main local-class="contact_page_content_container">
+      <div local-class="contact_page_content">
         This is the content section! What does this look like?
       </div>
     </main>
   </div>
-  <footer local-class="visit_page_footer_container">
+  <footer local-class="contact_page_footer_container">
     {{#if (or (media 'isLarge') (media 'isWide'))}}
     <Dynamic::Ui::Footer />
     {{/if}}
   </footer>
   {{#if (or (media 'isSmall') (media 'isMedium'))}}
   {{!-- template-lint-disable no-duplicate-landmark-elements --}}
-  <nav local-class="visit_page_mobile_navigation_container">
-    <div local-class="visit_page_mobile_navigation">
+  <nav local-class="contact_page_mobile_navigation_container">
+    <div local-class="contact_page_mobile_navigation">
       <Dynamic::Ui::Navigation::Mobile 
         @routeSlotOne={{this.welcomeRoute}} 
         @routeSlotTwo={{this.servicesRoute}}
-        @routeSlotThree={{this.visitRoute}} 
+        @routeSlotThree={{this.contactRoute}} 
         @routeSlotFour={{this.aboutRoute}} />
     </div>
   </nav>

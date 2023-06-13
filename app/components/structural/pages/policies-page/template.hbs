@@ -15,13 +15,13 @@
     {{!-- template-lint-disable no-duplicate-landmark-elements --}}
     <nav local-class="policies_page_mobile_navigation_container">
       <Dynamic::Ui::Navigation::Mobile @routeSlotOne={{this.welcomeRoute}} @routeSlotTwo={{this.servicesRoute}}
-        @routeSlotThree={{this.aboutRoute}} @routeSlotFour={{this.visitRoute}} />
+        @routeSlotThree={{this.aboutRoute}} @routeSlotFour={{this.contactRoute}} />
     </nav>
     {{/if}}
     {{#if (or (media 'isMedium') (media 'isLarge') (media 'isWide'))}}
     <nav local-class="policies_page_desktop_navigation_container">
       <Dynamic::Ui::Navigation::Desktop @routeSlotOne={{this.welcomeRoute}} @routeSlotTwo={{this.servicesRoute}}
-        @routeSlotThree={{this.aboutRoute}} @routeSlotFour={{this.visitRoute}} />
+        @routeSlotThree={{this.aboutRoute}} @routeSlotFour={{this.contactRoute}} />
       <address local-class="contact_container" aria-label="Our phone number and email">
         <div local-class="phone_number">
           Call us (207) 596-6700

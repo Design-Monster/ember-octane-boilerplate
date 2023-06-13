@@ -4,6 +4,5 @@ export default class StructuralPagesIndexPageComponent extends Component {
   //routes for link-tos
   welcomeRoute = 'index';
   servicesRoute = 'services';
-  visitRoute = 'visit';
-  aboutRoute = 'about';
+  contactRoute = 'contact';
 }

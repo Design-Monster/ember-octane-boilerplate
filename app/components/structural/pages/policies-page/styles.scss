@@ -91,18 +91,18 @@
     margin: calc($height_xxl + $margin_medium + $margin_extra_small + $margin_small) 0 $margin_large;
 
     @include breakpoint(medium) {
-      height: calc(100vh - calc($height_xxl + $padding_extra_small + $margin_large + $height_xl + $margin_large)); //height of: header, footer, margin-top, margin-bottom of visit_page_body
+      height: calc(100vh - calc($height_xxl + $padding_extra_small + $margin_large + $height_xl + $margin_large)); //height of: header, footer, margin-top, margin-bottom of contact_page_body
       flex-direction: row;
     }
 
     @include breakpoint(large) {
-      height: calc(100vh - calc($height_xxl + $padding_extra_small + $margin_large + $height_xl + $margin_large)); //height of: header, footer, margin-top, margin-bottom of visit_page_body
+      height: calc(100vh - calc($height_xxl + $padding_extra_small + $margin_large + $height_xl + $margin_large)); //height of: header, footer, margin-top, margin-bottom of contact_page_body
       flex-direction: row;
       margin: calc($height_xl + $margin_large) 0 $margin_large;
     }
 
     @include breakpoint(wide) {
-      height: calc(100vh - calc($height_xxl + $padding_extra_small + $margin_large + $height_xl + $margin_large)); //height of: header, footer, margin-top, margin-bottom of visit_page_body
+      height: calc(100vh - calc($height_xxl + $padding_extra_small + $margin_large + $height_xl + $margin_large)); //height of: header, footer, margin-top, margin-bottom of contact_page_body
       flex-direction: row;
       margin: calc($height_xl + $margin_large) 0 $margin_large;
     }

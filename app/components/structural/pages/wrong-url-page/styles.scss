@@ -44,14 +44,14 @@
       display: flex;
 
       @include breakpoint(large) {
-        min-height: $height_extra_extra_large;
-        max-height: $height_extra_extra_large;
+        min-height: $height_xxl;
+        max-height: $height_xxl;
         margin: 0 $margin_extra_small $margin_large;
       }
 
       @include breakpoint(wide) {
-        min-height: $height_extra_extra_large;
-        max-height: $height_extra_extra_large;
+        min-height: $height_xxl;
+        max-height: $height_xxl;
         margin: 0 $margin_small $margin_large;
       }
     }
@@ -59,11 +59,11 @@
     .wrong_url_page_content_container {
       display: flex;
       flex-direction: column;
-      margin: 0 $margin_small $margin_extra_large;
+      margin: 0 $margin_small $margin_xl;
 
       .wrong_url_page_content_header {
         display: flex;
-        margin: 10px $size_half_of_extra_large;
+        margin: 10px $margin_extra_medium;
         font-size: $font_size_medium;
         font-weight: 600;
 

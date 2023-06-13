@@ -1,9 +1,8 @@
 import Component from '@glimmer/component';
 
-export default class StructuralPagesAboutPageComponent extends Component {
+export default class StructuralPagesContactPageComponent extends Component {
   //routes for link-tos
   welcomeRoute = 'index';
   servicesRoute = 'services';
-  visitRoute = 'visit';
-  aboutRoute = 'about';
+  contactRoute = 'contact';
 }

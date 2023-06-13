@@ -2,7 +2,7 @@
 @import 'global/breakpoints';
 @import 'mixins/ease_transition';
 
-.about_page {
+.contact_page {
   display: flex;
   min-height: 100vh;
   flex: 1;
@@ -22,7 +22,7 @@
     overflow-y: auto;  
   }
 
-  .about_page_header_container {
+  .contact_page_header_container {
     position: fixed; 
     top: 0;
     display: flex;
@@ -46,14 +46,14 @@
       margin: 0 0 $margin_large;
     }
 
-    .about_page_desktop_navigation_container {
+    .contact_page_desktop_navigation_container {
       z-index: 100;
       display: flex;
       width: 65%;
       min-width: 65%;
       flex: 1;
 
-      .about_page_desktop_navigation {
+      .contact_page_desktop_navigation {
         display: flex;
         flex: 1;
         margin: 0 $margin_extra_small;
@@ -61,7 +61,7 @@
     }
   }
 
-  .about_page_body {
+  .contact_page_body {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -75,7 +75,7 @@
       flex-direction: row;
     }
 
-    .about_page_content_container {
+    .contact_page_content_container {
       flex: 1;
       overflow: auto;
 
@@ -87,7 +87,7 @@
         display: flex;
       }
 
-      .about_page_content {
+      .contact_page_content {
         display: flex;
         flex: 1;
         margin: 0 $margin_medium $margin_large;
@@ -128,19 +128,19 @@
     }
   }
 
-  .about_page_footer_container {
+  .contact_page_footer_container {
     display: flex;
     min-height: $height_large;
   }
 
-  .about_page_mobile_navigation_container {
+  .contact_page_mobile_navigation_container {
     position: fixed;
     bottom: 0;
     display: flex;
     width: 100%;
     max-width: 100%;
 
-    .about_page_mobile_navigation {
+    .contact_page_mobile_navigation {
       display: flex;
       flex: 1;
     }

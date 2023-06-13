@@ -1,0 +1,148 @@
+@import 'global/variables';
+@import 'global/breakpoints';
+@import 'mixins/ease_transition';
+
+.services_page {
+  display: flex;
+  min-height: 100vh;
+  flex: 1;
+  flex-direction: column;
+
+  @include breakpoint(large) {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;  
+  }
+
+  @include breakpoint(wide) {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;  
+  }
+
+  .services_page_header_container {
+    position: fixed; 
+    top: 0;
+    display: flex;
+    width: 100%;
+    min-width: 100%;
+    height: $height_xxl;
+    min-height: $height_xxl;
+    background-color: $color_white;
+
+    @include breakpoint(large) {
+      position: unset;
+      height: $height_xxl;
+      min-height: $height_xxl;
+      margin: 0 0 $margin_large;
+    }
+
+    @include breakpoint(wide) {
+      position: unset;
+      height: $height_xxl;
+      min-height: $height_xxl;
+      margin: 0 0 $margin_large;
+    }
+
+    .services_page_desktop_navigation_container {
+      z-index: 100;
+      display: flex;
+      width: 65%;
+      min-width: 65%;
+      flex: 1;
+
+      .services_page_desktop_navigation {
+        display: flex;
+        flex: 1;
+        margin: 0 $margin_extra_small;
+      }
+    }
+  }
+
+  .services_page_body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-top: calc($margin_xxl + $margin_extra_small);
+
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+
+    @include breakpoint(wide) {
+      flex-direction: row;
+    }
+
+    .services_page_content_container {
+      flex: 1;
+      overflow: auto;
+
+      @include breakpoint(large) {
+        display: flex;
+      }
+
+      @include breakpoint(wide) {
+        display: flex;
+      }
+
+      .services_page_content {
+        display: flex;
+        flex: 1;
+        margin: 0 $margin_medium $margin_large;
+        overflow-y: auto;
+        border-radius: $border_radius_primary;
+
+        a {
+          text-decoration: none;
+        }
+
+        @include breakpoint(large) {
+          margin: 0 $margin_large $margin_large 0;
+        }
+
+        @include breakpoint(wide) {
+          margin: 0 $margin_large $margin_large 0;
+        }
+
+        .non_expandable_block_container {
+          @include ease_transition();
+          display: flex;
+          flex: 1;
+          border-radius: $border_radius_primary;
+
+          @include breakpoint(large) {
+            min-height: 500px;
+            max-height: 500px;
+            margin: 0 $margin_extra_small $margin_medium;
+          }
+  
+          @include breakpoint(wide) {
+            min-height: 500px;
+            max-height: 500px;
+            margin: 0 $margin_small $margin_medium $margin_extra_small;
+          }
+        }
+      }
+    }
+  }
+
+  .services_page_footer_container {
+    display: flex;
+    min-height: $height_large;
+  }
+
+  .services_page_mobile_navigation_container {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+
+    .services_page_mobile_navigation {
+      display: flex;
+      flex: 1;
+    }
+  }
+}

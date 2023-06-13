@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
-    <title>EmberOctaneBoilerplate</title>
-    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="design, monster, designmonster, design monster, maine, midcoast, mid coast, camden, rockland, rockport, lincolnville, union, warren, hope, design and build, build, website, local, small, business, small business">
+    <title>Ember Octane Boilerplate</title>
+    <meta name="description" content="Design Monster designs and builds high quality websites for local businesses.">
+    <meta name="author" content="Design Monster">
+    <link rel="apple-touch-icon" sizes="196x196" href="/assets/images/favicon-196x196.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="/assets/images/favicon-128x128.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Design Monster LLC",
+      "image": "",
+      "@id": "",
+      "url": "https://www.designmonster.com",
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "Camden",
+        "addressRegion": "ME",
+        "postalCode": "04843",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "44° 12' 35.2548'' N",
+        "longitude": "69° 3' 53.2224'' W"
+      }
+    }
+      </script>
 
     {{content-for "head"}}
 
@@ -18,6 +49,9 @@
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/ember-octane-boilerplate.js"></script>
+    <!-- Cloudflare Web Analytics -->
+    <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "74ab1347c0c9490e924596c65d01a90f"}'></script> -->
+    <!-- End Cloudflare Web Analytics -->
 
     {{content-for "body-footer"}}
   </body>

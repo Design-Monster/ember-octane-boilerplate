@@ -1,0 +1,40 @@
+<Dynamic::Ui::Navigation::Skip-Link />
+<div local-class="wrong_url_page">
+  {{#if (or (media 'isSmall') (media 'isMedium'))}}
+  <nav local-class="wrong_url_page_mobile_navigation_container">
+    <Dynamic::Ui::Navigation::Mobile 
+      @routeSlotOne={{this.aboutUsRoute}} 
+      @routeSlotTwo={{this.productsRoute}}
+      @routeSlotThree={{this.whereToBuyRoute}} 
+      @routeSlotFour={{this.processRoute}} />
+  </nav>
+  {{else if (or (media 'isLarge') (media 'isWide'))}}
+  {{!-- template-lint-disable no-duplicate-landmark-elements --}}
+  <nav local-class="wrong_url_page_desktop_navigation_container">
+    <Dynamic::Ui::Navigation::Desktop
+      @avatarImage={{this.avatarImage}}
+      @routeSlotOne={{this.aboutUsRoute}} 
+      @routeSlotTwo={{this.productsRoute}} 
+      @routeSlotThree={{this.whereToBuyRoute}}
+      @routeSlotFour={{this.processRoute}} />
+  </nav>
+  {{/if}}
+  <div local-class="wrong_url_page_body_container">
+    {{#if (or (media 'isLarge') (media 'isWide'))}}
+    <div local-class="wrong_url_page_header_container">
+      <Dynamic::Ui::Header 
+        @headerNameFirst={{this.headerNameFirst}} 
+        @headerNameLast={{this.headerNameLast}}
+        @headerTitle={{this.headerTitle}} />
+    </div>
+    {{/if}}
+    <div local-class="wrong_url_page_content_container">
+      <div local-class="wrong_url_page_content_header">
+        <h1>This is the Content</h1>
+      </div>
+      <div local-class="wrong_url_page_content">
+        <Dynamic::Error />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 import Application from '@ember/application';
 
-import config from 'ember-octane-boilerplate/config/environment';
-import { initialize } from 'ember-octane-boilerplate/initializers/responsive2';
+import config from 'under-construction/config/environment';
+import { initialize } from 'under-construction/initializers/responsive2';
 import { module, test } from 'qunit';
 import Resolver from 'ember-resolver';
 import { run } from '@ember/runloop';

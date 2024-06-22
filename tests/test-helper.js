@@ -1,5 +1,5 @@
-import Application from 'ember-octane-boilerplate/app';
-import config from 'ember-octane-boilerplate/config/environment';
+import Application from 'under-construction/app';
+import config from 'under-construction/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';

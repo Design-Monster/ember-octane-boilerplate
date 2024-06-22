@@ -1,40 +1,17 @@
 
-<Dynamic::Ui::Navigation::Skip-Link />
 <div local-class="index_page">
-  <header local-class="index_page_header_container">
-    <Dynamic::Ui::Header />
-      {{#if (or (media 'isLarge') (media 'isWide'))}}
-      <nav local-class="index_page_desktop_navigation_container">
-        <div local-class="index_page_desktop_navigation">
-        <Dynamic::Ui::Navigation::Desktop 
-          @routeSlotOne={{this.welcomeRoute}} 
-          @routeSlotTwo={{this.servicesRoute}}
-          @routeSlotThree={{this.contactRoute}} />
-        </div>
-      </nav>
-      {{/if}}
-  </header>
-  <div local-class="index_page_body">
-    <main local-class="index_page_content_container">
-      <div local-class="index_page_content">
-        <p>Content</p>
-      </div>
-    </main>
-  </div>
-  <footer local-class="index_page_footer_container">
-    {{#if (or (media 'isLarge') (media 'isWide'))}}
-    <Dynamic::Ui::Footer />
-    {{/if}}
-  </footer>
-  {{#if (or (media 'isSmall') (media 'isMedium'))}}
-  {{!-- template-lint-disable no-duplicate-landmark-elements --}}
-  <nav local-class="index_page_mobile_navigation_container">
-    <div local-class="index_page_mobile_navigation">
-      <Dynamic::Ui::Navigation::Mobile 
-        @routeSlotOne={{this.welcomeRoute}} 
-        @routeSlotTwo={{this.servicesRoute}}
-        @routeSlotThree={{this.contactRoute}} />
-    </div>
-  </nav>
-  {{/if}}
+<h1>Design Monster LLC</h1>
+<h2>is excited to announce that it is opening an office space in downtown Camden Maine.</h2>
+<h3>We were recently awarded a grant by the Maine Department of Economic and Community Development to establish coworking and remote worker space on the MidCoast. We will use these funds to help renovate an unused mill building into a vibrant downtown space called Camden Creative. We expect the space to open in the winter of 2024.
+<br>
+<br>
+We will be launching new websites for both Design Monster and Camden Creative, so please check back in!
+<br>
+<br>
+Please email:
+<br>
+ask@DesignMonster.com
+<br>
+with any questions.
+</h3>
 </div>

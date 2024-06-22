@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'ember-octane-boilerplate',
+    modulePrefix: 'under-construction',
     environment,
     rootURL: '/',
     locationType: 'history',

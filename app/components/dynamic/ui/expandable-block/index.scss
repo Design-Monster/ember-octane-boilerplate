@@ -1,0 +1,295 @@
+@import 'global/variables';
+@import 'global/breakpoints';
+@import 'mixins/ease_transition';
+
+.expandable_block {
+  display: flex;
+  min-width: 200px;
+  flex: 1;
+  flex-direction: column;
+  font-size: $font_size_regular;
+  border: $border_two;
+  border-radius: $border_radius_primary;
+
+  @include breakpoint(large) {
+    flex-direction: row;
+  }
+
+  @include breakpoint(wide) {
+    flex-direction: row;
+  }
+
+  .modular_part_type_one {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    padding: $padding_medium $padding_medium 0;
+    overflow-y: auto;
+
+    @include breakpoint(large) {
+      min-width: 150px;
+      max-width: 150px;
+      flex: 1 1 0;
+      flex-direction: column;
+      padding: $padding_medium 0 $padding_medium $padding_medium;
+      align-items: flex-start;
+    }
+
+    @include breakpoint(wide) {
+      min-width: 150px;
+      max-width: 150px;
+      flex: 1 1 0;
+      flex-direction: column;
+      padding: $padding_medium 0 $padding_medium $padding_medium;
+      align-items: flex-start;
+    }
+
+    &.full_sized {
+      padding: $padding_medium;
+    }
+
+      .modular_part_type_one_image_container {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        padding: 0 $padding_extra_small 0 0;
+
+        @include breakpoint(medium) {
+          width: 125px;
+          height: 125px;
+          padding: 0 $padding_medium 0 0;
+        }
+
+        @include breakpoint(large) {
+          width: 150px;
+          height: 150px;
+          padding: 0 0 $padding_medium;
+        }
+
+        @include breakpoint(wide) {
+          width: 150px;
+          height: 150px;
+          padding: 0 0 $padding_medium;
+        }
+
+        picture {
+
+          img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+          }
+        }
+      }
+
+  .modular_part_type_one_text_boxes_container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-left: $padding_extra_small;
+
+    @include breakpoint(large) {
+      padding-left: 0;
+    }
+
+    @include breakpoint(wide) {
+      padding-left: 0;
+    }
+
+    .modular_part_type_one_text_box_one {
+      min-height: 2lh;
+      font-size: $font_size_medium;
+
+      @include breakpoint(large) {
+        font-size: $font_size_extra_medium;
+      }
+
+      @include breakpoint(wide) {
+        font-size: $font_size_extra_medium;
+      }
+
+      h1 {
+        all: unset;
+      }
+    }
+
+    .modular_part_type_one_text_box_two {
+      min-height: 2lh;
+      font-size: $font_size_medium;
+
+      @include breakpoint(large) {
+        font-size: $font_size_extra_medium;
+      }
+
+      @include breakpoint(wide) {
+        font-size: $font_size_extra_medium;
+      }
+    }
+
+    .modular_part_type_one_list {
+      padding: $padding_medium 0 0;
+      padding-inline-start: $padding_small;
+      margin-block-start: 0;
+
+      .modular_part_type_one_list_item {
+        color: $font_color_primary;
+        word-break: break-word;
+        margin-block-end: 1em;
+      }
+    }
+  }
+
+    .modular_part_type_one_lower_container {
+      display: flex;
+      align-self: flex-start;
+
+      a {
+        color: $font_color_primary;
+        text-decoration: none;
+
+        &:visited {
+          color: $font_color_primary;
+        }
+      }
+
+      .modular_part_type_one_linked_in {
+        font-size: $font_size_small;
+
+        @include breakpoint(large) {
+          margin: 0 0 0 $margin_extra_small;
+        }
+
+        @include breakpoint(wide) {
+          margin: 0 0 0 $margin_extra_small;
+        }
+      }
+
+      .modular_part_type_one_price {
+        color: $font_color_secondary;
+
+        @include breakpoint(large) {
+          font-size: $font_size_extra_medium;
+        }
+
+        @include breakpoint(wide) {
+          font-size: $font_size_extra_medium;
+        }
+      }
+    }
+  }
+
+  .modular_part_type_two {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: $margin_medium 0;
+    text-align: left;
+
+    @include breakpoint(large) {
+      flex: 2 1 0;
+      overflow-y: auto;
+      -webkit-mask-image: linear-gradient(180deg, $color_black 95%, transparent); //sass-lint:disable-line no-vendor-prefixes
+      mask-image: linear-gradient(180deg, $color_black 95%, transparent);
+    }
+
+    @include breakpoint(wide) {
+      flex: 2 1 0;
+      overflow-y: auto;
+      -webkit-mask-image: linear-gradient(180deg, $color_black 95%, transparent); //sass-lint:disable-line no-vendor-prefixes
+      mask-image: linear-gradient(180deg, $color_black 95%, transparent);
+    }
+
+  .modular_part_type_two_text_boxes_container {
+    display: flex;
+    padding: 0 0 $padding_medium;
+
+    .modular_part_type_two_text_box_one {
+      min-height: 2lh;
+      flex: 1;
+      margin: 0 $margin_extra_small 0 0;
+      font-size: $font_size_extra_medium;
+
+      &.font_size_larger {
+        font-size: $font_size_xl;
+      }
+
+      h1 {
+        all: unset;
+      }
+    }
+
+    .modular_part_type_two_text_box_two {
+      min-height: 2lh;
+      color: $font_color_secondary;
+
+      @include breakpoint(large) {
+        font-size: $font_size_medium;
+      }
+
+      @include breakpoint(wide) {
+        font-size: $font_size_medium;
+      }
+    }
+
+    &.full_sized {
+      padding: 0 $padding_medium $padding_medium;
+    }
+  }
+
+    .modular_part_type_two_paragraphs_container {
+      @include ease_transition();
+      flex: 1;
+      padding: 0 $padding_medium;
+      color: $font_color_charcoal;
+
+      section {
+        margin-block-end: $margin_medium;
+      }
+
+      .modular_part_type_two_paragraph_title_container {
+        @include ease_transition();
+        color: $font_color_primary;
+
+        h2 {
+          all: unset;
+        }
+      }
+
+      .modular_part_type_two_paragraph_container {
+        @include ease_transition();
+        margin: 0 0 $margin_medium;
+      }
+
+      .modular_part_type_two__paragraph_image_group_container {
+        @include ease_transition();
+        container: expandable-block-modular-part-type-two-paragraph-image-group-container / inline-size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modular_part_type_two__paragraph_image_hero_container {
+        @include ease_transition();
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modular_part_type_two_address_section_title {
+        display: block;
+        margin: $margin_medium 0 0;
+        font-size: $font_size_extra_medium;
+
+        h2 {
+          all: unset;
+        }
+      }
+
+      .modular_part_type_two_address_section_email {
+        margin: $margin_medium 0;
+        color: $font_color_secondary;
+      }
+    }
+  }
+}

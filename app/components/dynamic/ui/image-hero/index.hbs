@@ -1,0 +1,36 @@
+<span local-class="image_hero">
+  <span>
+    {{#if (media 'isSmall')}}
+    <img
+      src={{@imageOneSmallFallback}}
+      max-width="200px"
+      loading="lazy"
+      alt={{@imageOneAltLabel}}
+      srcset={{@imageOneSmallSrcset}}>
+    {{/if}}
+    {{#if (media 'isMedium')}}
+    <img
+      src={{@imageOneMediumFallback}}
+      max-width="400px"
+      loading="lazy"
+      alt={{@imageOneAltLabel}}
+      srcset={{@imageOneMediumSrcset}}>
+    {{/if}}
+    {{#if (media 'isLarge')}}
+    <img
+      src={{@imageOneLargeFallback}}
+      max-width="600px"
+      loading="lazy"
+      alt={{@imageOneAltLabel}}
+      srcset={{@imageOneLargeSrcset}}>
+    {{/if}}
+    {{#if (media 'isWide')}}
+    <img
+      src={{@imageOneWideFallback}}
+      max-width="600px"
+      loading="lazy"
+      alt={{@imageOneAltLabel}}
+      srcset={{@imageOneWideSrcset}}>
+    {{/if}}
+  </span>
+</span>

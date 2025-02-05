@@ -8,7 +8,7 @@ module.exports = function () {
     policy: {
       'connect-src': ["'self'"],
       'default-src': ["'self'"],
-      'script-src': ["'self'"],
+      'script-src': ["'self'", "'https://*.fontawesome.com/*/'"],
       'font-src': [
         "'self'",
         "'https://fonts.gstatic.com'",

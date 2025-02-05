@@ -1,0 +1,64 @@
+@import 'global/variables';
+@import 'global/breakpoints';
+
+.header {
+  display: flex;
+  flex: 1;
+  border-bottom: $border_one;
+  align-items: flex-end;
+
+  .header_content {
+    display: flex;
+    flex: 1;
+    align-items: baseline;
+
+    a {
+      display: flex;
+      color: $font_color_secondary;
+      text-decoration: none;
+      cursor: default;
+      align-items: baseline;
+
+      &.hover_pointer {
+        &:hover {
+          color: $font_color_primary;
+          cursor: pointer;
+        }
+      }
+
+      &:visited {
+        color: $font_color_secondary;
+      }
+    }
+
+    .text_container_one {
+      display: flex;
+      flex: 1;
+      margin: 0;
+      color: $font_color_secondary;
+      align-items: baseline;
+
+      .one {
+        font-size: $font_size_xl;
+        font-weight: 100;
+      }
+
+      .two {
+        margin-left: $margin_extra_small;
+        font-size: $font_size_xl;
+      }
+    }
+
+    .text_container_two {
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+        width: 185px;
+        max-width: 185px;
+        height: 19px;
+        max-height: 19px;
+      }
+    }
+  }
+}

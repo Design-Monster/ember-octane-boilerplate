@@ -1,0 +1,341 @@
+<span local-class="expandable_block">
+  {{!-- ModularPartTypeOne --}}
+  {{#if @modularPartTypeOneIsVisible}}
+  <span local-class="modular_part_type_one {{unless @modularPartTypeTwoIsVisible "full_sized"}}">
+    {{!-- ModularPartTypeOne image --}}
+    {{#if @modularPartTypeOneImageOneAltLabel}}
+    <span local-class="modular_part_type_one_image_container">
+      <picture>
+      {{#if (media 'isSmall')}}
+        <source
+          srcset={{@modularPartTypeOneImageOneSmall}}
+          loading="eager"
+          alt={{@modularPartTypeOneImageOneAltLabel}}
+          type="image/webp">
+        <img
+          src={{@modularPartTypeOneImageOneSmallFallback}}
+          loading="eager"
+          alt={{@modularPartTypeOneImageOneAltLabel}}>
+      {{/if}}
+      {{#if (media 'isMedium')}}
+        <source
+          srcset={{@modularPartTypeOneImageOneMedium}}
+          loading="eager"
+          alt={{@modularPartTypeOneImageOneAltLabel}}
+          type="image/webp">
+        <img
+          src={{@modularPartTypeOneImageOneMediumFallback}}
+          loading="eager"
+          alt={{@modularPartTypeOneImageOneAltLabel}}>
+      {{/if}}
+      {{#if (media 'isLarge')}}
+        <source
+          srcset={{@modularPartTypeOneImageOneLarge}}
+          loading="eager"
+          alt={{@modularPartTypeOneImageOneAltLabel}}
+          type="image/webp">
+        <img
+          src={{@modularPartTypeOneImageOneLargeFallback}}
+          loading="eager"
+          alt={{@modularPartTypeOneImageOneAltLabel}}>
+      {{/if}}
+      {{#if (media 'isWide')}}
+        <source
+          srcset={{@modularPartTypeOneImageOneWide}}
+          loading="eager"
+          alt={{@modularPartTypeOneImageOneAltLabel}}
+          type="image/webp">
+        <img
+          src={{@modularPartTypeOneImageOneWideFallback}}
+          loading="eager"
+          alt={{@modularPartTypeOneImageOneAltLabel}}>
+      {{/if}}
+      </picture>
+    </span>
+    {{/if}}
+    {{!-- ModularPartTypeOne text boxes --}}
+    {{#if (or @modularPartTypeOneTextBoxOneLabel @modularPartTypeOneTextBoxTwoLabel)}}
+    <span local-class="modular_part_type_one_text_boxes_container">
+      {{#if @modularPartTypeOneTextBoxOneLabel}}
+      <span local-class="modular_part_type_one_text_box_one">
+        <h1>{{@modularPartTypeOneTextBoxOneLabel}}
+        {{#if @modularPartTypeTwoIsVisible}}
+        <br />{{@modularPartTypeOneTextBoxTwoLabel}}
+        {{/if}}</h1>
+      </span>
+      {{/if}}
+      {{!-- ModularPartTypeOne bulleted list --}}
+      {{#if @modularPartTypeOneListItemOne}}
+      <ul local-class="modular_part_type_one_list">
+        {{#if @modularPartTypeOneListItemOne}}
+        <li local-class="modular_part_type_one_list_item">{{@modularPartTypeOneListItemOne}}</li>
+        {{/if}}
+        {{#if @modularPartTypeOneListItemTwo}}
+        <li local-class="modular_part_type_one_list_item">{{@modularPartTypeOneListItemTwo}}</li>
+        {{/if}}
+        {{#if @modularPartTypeOneListItemThree}}
+        <li local-class="modular_part_type_one_list_item">{{@modularPartTypeOneListItemThree}}</li>
+        {{/if}}
+        {{#if @modularPartTypeOneListItemFour}}
+        <li local-class="modular_part_type_one_list_item">{{@modularPartTypeOneListItemFour}}</li>
+        {{/if}}
+        {{#if @modularPartTypeOneListItemFive}}
+        <li local-class="modular_part_type_one_list_item">{{@modularPartTypeOneListItemFive}}</li>
+        {{/if}}
+        {{#if @modularPartTypeOneListItemSix}}
+        <li local-class="modular_part_type_one_list_item">{{@modularPartTypeOneListItemSix}}</li>
+        {{/if}}
+        {{#if @modularPartTypeOneListItemSeven}}
+        <li local-class="modular_part_type_one_list_item">{{@modularPartTypeOneListItemSeven}}</li>
+        {{/if}}
+        {{#if @modularPartTypeOneListItemEight}}
+        <li local-class="modular_part_type_one_list_item">{{@modularPartTypeOneListItemEight}}</li>
+        {{/if}}
+      </ul>
+      {{/if}}
+    </span>
+    {{/if}}
+    {{!-- ModularPartTypeOne lower/footer container --}}
+    {{#if (or @modularPartTypeOneLinkedIn @modularPartTypeOnePrice)}}
+    <span local-class="modular_part_type_one_lower_container">
+      {{#if @modularPartTypeOneLinkedIn}}
+      <a href="{{@modularPartTypeOneLinkedInUrl}}" target="_blank" aria-label="Go to {{@modularPartTypeOneTextBoxOneLabel}}'s Linked In page - this will take you to an external site on a separate tab." rel="noopener noreferrer">
+        <FaIcon @icon="linkedin" title="Linked In" @prefix="fab" @size="2x" />
+        {{#if (or (media 'isMedium') (media 'isLarge') (media 'isWide'))}}
+        <span local-class="modular_part_type_one_linked_in">{{@modularPartTypeOneLinkedIn}}</span>
+        {{/if}}
+      </a>
+      {{/if}}
+      {{#if @modularPartTypeOnePrice}}
+      <span local-class="price">{{@modularPartTypeOnePrice}}</span>
+      {{/if}}
+    </span>
+    {{/if}}
+  </span>
+  {{/if}}
+  {{!-- ModularPartTypeTwo --}}
+  {{#if @modularPartTypeTwoIsVisible}}
+  <span local-class="modular_part_type_two">
+    {{!-- ModularPartTypeTwo text boxes --}}
+    {{#if (or @modularPartTypeTwoTextBoxOneLabel @modularPartTypeTwoTextBoxTwoLabel)}}
+    <span local-class="modular_part_type_two_text_boxes_container {{unless @modularPartTypeOneIsVisible "full_sized"}}">
+    {{#unless @modularPartTypeOneIsVisible}}
+    {{#if @modularPartTypeTwoTextBoxOneLabel}}
+    <span local-class="modular_part_type_two_text_box_one">
+      <h1>{{@modularPartTypeTwoTextBoxOneLabel}}</h1>
+    </span>
+    {{/if}}
+    {{/unless}}
+    {{#if @modularPartTypeTwoTextBoxTwoLabel}}
+      <span local-class="modular_part_type_two_text_box_two">
+        {{@modularPartTypeTwoTextBoxTwoLabel}}
+      </span>
+    {{/if}}
+    </span>
+    {{/if}}
+    {{!-- ModularPartTypeTwo paragraphs container --}}
+    <article local-class="modular_part_type_two_paragraphs_container">
+      {{#if (or @modularPartTypeTwoParagraphOne @modularPartTypeTwoParagraphOneTitle)}}
+      <section>
+        {{#if @modularPartTypeTwoParagraphOneTitle}}
+        <span local-class="modular_part_type_two_paragraph_title_container">
+        <h2>{{@modularPartTypeTwoParagraphOneTitle}}</h2>
+        </span>
+        {{/if}}
+        {{#if @modularPartTypeTwoParagraphOne}}
+        <span local-class="modular_part_type_two_paragraph_container">
+        {{@modularPartTypeTwoParagraphOne}}
+        </span>
+        {{/if}}
+      </section>
+      {{/if}}
+      {{#if (has-block "modularPartTypeTwoParagraphOneImageGroup")}}
+        <div local-class="modular_part_type_two__paragraph_image_group_container">
+        {{yield to="modularPartTypeTwoParagraphOneImageGroup"}}
+        </div>
+      {{/if}}
+      {{#if (has-block "modularPartTypeTwoParagraphOneImageHero")}}
+        <div local-class="modular_part_type_two__paragraph_image_hero_container">
+        {{yield to="modularPartTypeTwoParagraphOneImageHero"}}
+        </div>
+      {{/if}}
+      {{#if (or @modularPartTypeTwoParagraphTwo @modularPartTypeTwoParagraphTwoTitle)}}
+      <section>
+        {{#if @modularPartTypeTwoParagraphTwoTitle}}
+        <span local-class="modular_part_type_two_paragraph_title_container">
+        {{#if @modularPartTypeTwoParagraphTwoTitle}}
+        <h2>{{@modularPartTypeTwoParagraphTwoTitle}}</h2>
+        {{/if}}
+        </span>
+        {{/if}}
+        {{#if @modularPartTypeTwoParagraphTwo}}
+        <span local-class="modular_part_type_two_paragraph_container">
+        {{@modularPartTypeTwoParagraphTwo}}
+        </span>
+        {{/if}}
+      </section>
+      {{/if}}
+      {{#if (has-block "modularPartTypeTwoParagraphTwoImageGroup")}}
+      <div local-class="modular_part_type_two__paragraph_image_group_container">
+      {{yield to="modularPartTypeTwoParagraphTwoImageGroup"}}
+      </div>
+      {{/if}}
+      {{#if (or @modularPartTypeTwoParagraphThree @modularPartTypeTwoParagraphThreeTitle)}}
+      <section>
+        {{#if @modularPartTypeTwoParagraphThreeTitle}}
+        <span local-class="modular_part_type_two_paragraph_title_container">
+        <h2>{{@modularPartTypeTwoParagraphThreeTitle}}</h2>
+        </span>
+        {{/if}}
+        {{#if @modularPartTypeTwoParagraphThree}}
+        <span local-class="modular_part_type_two_paragraph_container">
+        {{@modularPartTypeTwoParagraphThree}}
+        </span>
+        {{/if}}
+      </section>
+      {{/if}}
+      {{#if (has-block "modularPartTypeTwoParagraphThreeImageGroup")}}
+      <div local-class="modular_part_type_two__paragraph_image_group_container">
+      {{yield to="modularPartTypeTwoParagraphThreeImageGroup"}}
+      </div>
+      {{/if}}
+      {{#if (or @modularPartTypeTwoParagraphFour @modularPartTypeTwoParagraphFourTitle)}}
+      <section>
+        {{#if @modularPartTypeTwoParagraphFour}}
+        <span local-class="modular_part_type_two_paragraph_title_container">
+        <h2>{{@modularPartTypeTwoParagraphFourTitle}}</h2>
+        </span>
+        {{/if}}
+        {{#if @modularPartTypeTwoParagraphFour}}
+        <span local-class="modular_part_type_two_paragraph_container">
+        {{@modularPartTypeTwoParagraphFour}}
+        </span>
+        {{/if}}
+      </section>
+      {{/if}}
+      {{#if (has-block "modularPartTypeTwoParagraphFourImageGroup")}}
+      <div local-class="modular_part_type_two__paragraph_image_group_container">
+      {{yield to="modularPartTypeTwoParagraphFourImageGroup"}}
+      </div>
+      {{/if}}
+      {{#if (or @modularPartTypeTwoParagraphFive @modularPartTypeTwoParagraphFiveTitle)}}
+      <section>
+        {{#if @modularPartTypeTwoParagraphFiveTitle}}
+        <span local-class="modular_part_type_two_paragraph_title_container">
+        <h2>{{@modularPartTypeTwoParagraphFiveTitle}}</h2>
+        </span>
+        {{/if}}
+        {{#if @modularPartTypeTwoParagraphFive}}
+        <span local-class="modular_part_type_two_paragraph_container">
+        {{@modularPartTypeTwoParagraphFive}}
+        </span>
+        {{/if}}
+      </section>
+      {{/if}}
+      {{#if (has-block "modularPartTypeTwoParagraphFiveImageGroup")}}
+      <div local-class="modular_part_type_two__paragraph_image_group_container">
+      {{yield to="modularPartTypeTwoParagraphFiveImageGroup"}}
+      </div>
+      {{/if}}
+      {{#if (or @modularPartTypeTwoParagraphSix @modularPartTypeTwoParagraphSixTitle)}}
+      <section>
+        {{#if @modularPartTypeTwoParagraphSixTitle}}
+        <span local-class="modular_part_type_two_paragraph_title_container">
+        <h2>{{@modularPartTypeTwoParagraphSixTitle}}</h2>
+        </span>
+        {{/if}}
+        {{#if @modularPartTypeTwoParagraphSix}}
+        <span local-class="modular_part_type_two_paragraph_container">
+        {{@modularPartTypeTwoParagraphSix}}
+        </span>
+        {{/if}}
+      </section>
+      {{/if}}
+      {{#if (has-block "modularPartTypeTwoParagraphSixImageGroup")}}
+      <div local-class="modular_part_type_two__paragraph_image_group_container">
+      {{yield to="modularPartTypeTwoParagraphSixImageGroup"}}
+      </div>
+      {{/if}}
+      {{#if (or @modularPartTypeTwoParagraphSeven @modularPartTypeTwoParagraphSevenTitle)}}
+      <section>
+        {{#if @modularPartTypeTwoParagraphSevenTitle}}
+        <span local-class="modular_part_type_two_paragraph_title_container">
+        <h2>{{@modularPartTypeTwoParagraphSevenTitle}}</h2>
+        </span>
+        {{/if}}
+        {{#if @modularPartTypeTwoParagraphSeven}}
+        <span local-class="modular_part_type_two_paragraph_container">
+        {{@modularPartTypeTwoParagraphSeven}}
+        </span>
+        {{/if}}
+      </section>
+      {{/if}}
+      {{#if (has-block "modularPartTypeTwoParagraphSevenImageGroup")}}
+      <div local-class="modular_part_type_two__paragraph_image_group_container">
+      {{yield to="modularPartTypeTwoParagraphSevenImageGroup"}}
+      </div>
+      {{/if}}
+      {{#if (or @modularPartTypeTwoParagraphEight @modularPartTypeTwoParagraphEightTitle)}}
+      <section>
+        {{#if @modularPartTypeTwoParagraphEightTitle}}
+        <span local-class="modular_part_type_two_paragraph_title_container">
+        <h2>{{@modularPartTypeTwoParagraphEightTitle}}</h2>
+        </span>
+        {{/if}}
+        {{#if @modularPartTypeTwoParagraphEight}}
+        <span local-class="modular_part_type_two_paragraph_container">
+        {{@modularPartTypeTwoParagraphEight}}
+        </span>
+        {{/if}}
+      </section>
+      {{/if}}
+      {{#if (has-block "modularPartTypeTwoParagraphEightImageGroup")}}
+      <div local-class="modular_part_type_two__paragraph_image_group_container">
+      {{yield to="modularPartTypeTwoParagraphEightImageGroup"}}
+      </div>
+      {{/if}}
+      {{!-- modularPartTypeTwo Address Section --}}
+      {{#if @modularPartTypeTwoAddressSection}}
+      <section>
+        <hr>
+        {{#if @modularPartTypeTwoAddressSectionTitle}}
+        <span local-class="modular_part_type_two_address_section_title">
+        <h2>{{@modularPartTypeTwoAddressSectionTitle}}</h2>
+        </span>
+        {{/if}}
+        {{#if @modularPartTypeTwoAddressSectionEmail}}
+        <address local-class="modular_part_type_two_address_section_email">
+          {{@modularPartTypeTwoAddressSectionEmail}}
+        </address>
+        {{/if}}
+        {{#if @modularPartTypeTwoAddressSectionPhysicalLocation}}
+        <span local-class="modular_part_type_two_paragraph_container">
+        {{@modularPartTypeTwoAddressSectionPhysicalLocation}}
+        </span>
+        {{/if}}
+      </section>
+      {{/if}}
+    </article>
+    {{!-- modularPartTypeTwo Image Grid One --}}
+    {{#if (has-block "modularPartTypeTwoImageGridOne")}}
+    {{yield to="modularPartTypeTwoImageGridOne"}}
+    {{/if}}
+    {{!-- modularPartTypeTwo Pricing Grid One--}}
+    {{#if (has-block "modularPartTypeTwoGridOne")}}
+    {{yield to="modularPartTypeTwoGridOne"}}
+    {{/if}}
+    {{!-- modularPartTypeTwo Pricing Grid Two--}}
+    {{#if (has-block "modularPartTypeTwoGridTwo")}}
+    {{yield to="modularPartTypeTwoGridTwo"}}
+    {{/if}}
+    {{!-- modularPartTypeTwo Pricing Grid Three--}}
+    {{#if (has-block "modularPartTypeTwoGridThree")}}
+    {{yield to="modularPartTypeTwoGridThree"}}
+    {{/if}}
+    {{!-- modularPartTypeTwo Pricing Grid Four--}}
+    {{#if (has-block "modularPartTypeTwoGridFour")}}
+    {{yield to="modularPartTypeTwoGridFour"}}
+    {{/if}}
+  </span>
+  {{/if}}
+</span>

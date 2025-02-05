@@ -29,7 +29,7 @@ $breakpoints: (
 );
 
 //Breakpoint functions and mixins
-@function map-deep-get($map, $keys...) {
+@function map-deep-get($map, $keys...) { //sass-lint:disable-line function-name-format
 	@each $key in $keys {
 		$map: map-get($map, $key);
 	}
@@ -39,7 +39,7 @@ $breakpoints: (
 	@if not map-has-key($breakpoints, $name) {
 		@warn 'Warning: `#{$name}` is not a valid breakpoint name.';
 	} @else {
-		@media (min-width: map-deep-get($breakpoints, $name, 'min')) and (max-width: map-deep-get($breakpoints, $name, 'max')) {
+		@media (min-width: map-deep-get($breakpoints, $name, 'min')) and (max-width: map-deep-get($breakpoints, $name, 'max')) { //sass-lint:disable-line function-name-format
 			@content;
 		}
 	}

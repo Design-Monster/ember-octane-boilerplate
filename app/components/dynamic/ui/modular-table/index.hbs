@@ -1,0 +1,168 @@
+<div local-class="modular_table">
+  <div local-class="modular_table_section top">
+    {{#if @modularTableCellHeaderOne}}
+    <div local-class="modular_table_cell_header top_left_corner">
+      <span>{{@modularTableCellHeaderOne}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellHeaderTwo}}
+    <div local-class="modular_table_cell_header">
+      <span>{{@modularTableCellHeaderTwo}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellHeaderThree}}
+    <div local-class="modular_table_cell_header">
+      <span>{{@modularTableCellHeaderThree}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellHeaderFour}}
+    <div local-class="modular_table_cell_header top_right_corner">
+      <span>{{@modularTableCellHeaderFour}}</span>
+    </div>
+    {{/if}}
+  </div>
+  {{#if (or @modularTableCellOne @modularTableCellTwo @modularTableCellThree @modularTableCellFour)}}
+  <div local-class="modular_table_section {{if @modularTableSectionTwoBottom "bottom"}}">
+    {{#if @modularTableCellOne}}
+    <div local-class="modular_table_cell {{if @modularTableCellOneBottomLeftCorner "bottom_left_corner"}}">
+      <span>{{@modularTableCellOne}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellTwo}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellTwo}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellThree}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellThree}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellFour}}
+    <div local-class="modular_table_cell {{if @modularTableCellFourBottomRightCorner "bottom_right_corner"}}">
+      <span>{{@modularTableCellFour}}</span>
+    </div>
+    {{/if}}
+  </div>
+  {{/if}}
+  {{#if (or @modularTableCellFive @modularTableCellSix @modularTableCellSeven @modularTableCellEight)}}
+  <div local-class="modular_table_section {{if @modularTableSectionThreeBottom "bottom"}}">
+    {{#if @modularTableCellFive}}
+    <div local-class="modular_table_cell {{if @modularTableCellFiveBottomLeftCorner "bottom_left_corner"}}">
+      <span>{{@modularTableCellFive}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellSix}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellSix}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellSeven}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellSeven}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellEight}}
+    <div local-class="modular_table_cell {{if @modularTableCellEightBottomRightCorner "bottom_right_corner"}}">
+      <span>{{@modularTableCellEight}}</span>
+    </div>
+    {{/if}}
+  </div>
+  {{/if}}
+  {{#if (or @modularTableCellNine @modularTableCellTen @modularTableCellEleven @modularTableCellTwelve)}}
+  <div local-class="modular_table_section {{if @modularTableSectionFourBottom "bottom"}}">
+    {{#if @modularTableCellNine}}
+    <div local-class="modular_table_cell {{if @modularTableCellNineBottomLeftCorner "bottom_left_corner"}}">
+      <span>{{@modularTableCellNine}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellTen}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellTen}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellEleven}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellEleven}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellTwelve}}
+    <div local-class="modular_table_cell {{if @modularTableCellTwelveBottomRightCorner "bottom_right_corner"}}">
+      <span>{{@modularTableCellTwelve}}</span>
+    </div>
+    {{/if}}
+  </div>
+  {{/if}}
+  {{#if (or @modularTableCellThirteen @modularTableCellFourteen @modularTableCellFifteen @modularTableCellSixteen)}}
+  <div local-class="modular_table_section {{if @modularTableSectionFiveBottom "bottom"}}">
+    {{#if @modularTableCellThirteen}}
+    <div local-class="modular_table_cell {{if @modularTableCellThirteenBottomLeftCorner "bottom_left_corner"}}">
+      <span>{{@modularTableCellThirteen}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellFourteen}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellFourteen}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellFifteen}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellFifteen}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellSixteen}}
+    <div local-class="modular_table_cell {{if @modularTableCellSixteenBottomRightCorner "bottom_right_corner"}}">
+      <span>{{@modularTableCellSixteen}}</span>
+    </div>
+    {{/if}}
+  </div>
+  {{/if}}
+  {{#if (or @modularTableCellSeventeen @modularTableCellEighteen @modularTableCellNineteen @modularTableCellTwenty)}}
+  <div local-class="modular_table_section {{if @modularTableSectionSixBottom "bottom"}}">
+    {{#if @modularTableCellSeventeen}}
+    <div local-class="modular_table_cell {{if @modularTableCellSeventeenBottomLeftCorner "bottom_left_corner"}}">
+      <span>{{@modularTableCellSeventeen}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellEighteen}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellEighteen}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellNineteen}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellNineteen}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellTwenty}}
+    <div local-class="modular_table_cell {{if @modularTableCellTwentyBottomRightCorner "bottom_right_corner"}}">
+      <span>{{@modularTableCellTwenty}}</span>
+    </div>
+    {{/if}}
+  </div>
+  {{/if}}
+  {{#if (or @modularTableCellTwentyOne @modularTableCellTwentyTwo @modularTableCellTwentyThree @modularTableCellTwentyFour)}}
+  <div local-class="modular_table_section {{if @modularTableSectionSevenBottom "bottom"}}">
+    {{#if @modularTableCellTwentyOne}}
+    <div local-class="modular_table_cell {{if @modularTableCellTwentyOneBottomLeftCorner "bottom_left_corner"}}">
+      <span>{{@modularTableCellTwentyOne}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellTwentyTwo}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellTwentyTwo}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellTwentyThree}}
+    <div local-class="modular_table_cell">
+      <span>{{@modularTableCellTwentyThree}}</span>
+    </div>
+    {{/if}}
+    {{#if @modularTableCellTwentyFour}}
+    <div local-class="modular_table_cell {{if @modularTableCellTwentyFourBottomRightCorner "bottom_right_corner"}}">
+      <span>{{@modularTableCellTwentyFour}}</span>
+    </div>
+    {{/if}}
+  </div>
+  {{/if}}
+</div>

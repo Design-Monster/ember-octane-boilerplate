@@ -10,33 +10,34 @@ $size_xxl: 6.25rem; //100px
 //Colors
 $color_white: #ffffff;
 $color_black: #000000;
-$color_blue_primary: #0435df;
-$color_blue_secondary: lighten($color_blue_primary, 45%);
+$color_yellow_primary: #debf04;
+$color_blue_primary: #03259e;
+$color_yellow_secondary: darken($color_yellow_primary, 10%);
 $color_black_overlay: lighten($color_black, 15%);
-$color_blue_darkened: #03259e;
 $color_charcoal: #36454f;
 $color_light_grey: #f0f0f0;
 
 //Borders
-$border_one: solid 6px $color_blue_primary;
-$border_two: solid 1px $color_blue_secondary;
-$border_three: solid 0.8px $color_blue_primary;
-$border_four: solid 2px $color_blue_secondary;
+$border_one: solid 6px $color_yellow_primary;
+$border_two: solid 1px $color_yellow_primary;
+$border_three: solid 0.8px $color_yellow_primary;
+$border_four: solid 2px $color_yellow_primary;
+$border_five: solid 0.5px $color_yellow_primary;
 
 //Borders Radius
 $border_radius_primary: 0.5em;
+$border_radius_secondary: 0.25em;
 
 //Margins
 $margin_extra_small: $size_extra_small;
 $margin_small: $size_small;
 $margin_medium: $size_medium;
-$margin_extra_medium: $size_extra_medium;
 $margin_large: $size_large;
 $margin_xl: $size_xl;
 $margin_xxl: $size_xxl;
 
 //Padding
-$padding_extra_small: $size_extra_small;  
+$padding_extra_small: $size_extra_small;
 $padding_small: $size_small;
 $padding_medium: $size_medium;
 $padding_large: $size_large;
@@ -62,10 +63,20 @@ $font_size_xxl: clamp(2.5em, 2.5em, 3em); //40px-48px
 $font_color_regular: $color_black;
 $font_color_inverse: $color_white;
 $font_color_primary: $color_blue_primary;
-$font_color_secondary: $color_blue_darkened;
+$font_color_secondary: $color_yellow_primary;
 $font_color_charcoal: $color_charcoal;
 
 //box-shadow
-$box_shadow_primary: 1px 4px 6px $color_blue_secondary;
-$box_shadow_focused: 1px 4px 6px $color_blue_darkened;
+$box_shadow_primary: 1px 4px 6px $color_yellow_primary;
+$box_shadow_focused: 1px 4px 6px $color_yellow_secondary;
 $box_shadow_disabled: 1px 4px 6px $color_charcoal;
+
+//background-url
+$background_url_index_mobile: '/assets/images/condoInsideFour.jpeg';
+$background_url_index_tablet: '/assets/images/condoInsideFour.jpeg';
+$background_url_index_large: '/assets/images/condoInsideFour.jpeg';
+$background_url_index_wide: '/assets/images/condoInsideFour.jpeg';
+$background_url_wrong_url_mobile: '/assets/images/condoInsideFour.jpeg';
+$background_url_wrong_url_tablet: '/assets/images/condoInsideFour.jpeg';
+$background_url_wrong_url_large: '/assets/images/condoInsideFour.jpeg';
+$background_url_wrong_url_wide: '/assets/images/condoInsideFour.jpeg';

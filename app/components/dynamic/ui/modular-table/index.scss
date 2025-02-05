@@ -1,0 +1,113 @@
+@import 'global/variables';
+@import 'global/breakpoints';
+
+.modular_table {
+  display: grid;
+  margin: $margin_extra_small;
+  gap: 0.5px;
+  grid-template-columns: minmax(0, 1fr);
+  font-size: $font_size_small;
+  background-color: $color_yellow_primary;
+  border-right: $border_five;
+  border-radius: $border_radius_primary;
+
+  @include breakpoint(medium) {
+    font-size: $font_size_regular;
+  }
+
+  @include breakpoint(large) {
+    margin: $margin_small;
+    font-size: $font_size_regular;
+  }
+
+  @include breakpoint(wide) {
+    margin: $margin_small;
+    font-size: $font_size_regular;
+  }
+
+  .modular_table_section {
+    display: flex;
+
+    &.top {
+      margin-top: 0.5px;
+      border-radius: $border_radius_primary $border_radius_primary 0 0;
+    }
+
+    &.bottom {
+      margin-bottom: 0.5px;
+      border-radius: 0 0 $border_radius_primary $border_radius_primary;
+    }
+
+    .modular_table_cell_header {
+      display: flex;
+      min-height: $height_large;
+      max-height: $height_xl;
+      flex: 1;
+      padding: $padding_extra_small;
+      margin-left: 0.5px;
+      overflow: auto;
+      background-color: $color_yellow_primary;
+      align-items: center;
+      justify-content: center;
+
+      &.top_left_corner {
+        border-radius: $border_radius_primary 0 0;
+      }
+
+      &.top_right_corner {
+        border-radius: 0 $border_radius_primary 0 0;
+      }
+
+      &.bottom_left_corner {
+        border-radius: 0 0 0 $border_radius_primary;
+      }
+
+      &.bottom_right_corner {
+        border-radius: 0 0 $border_radius_primary;
+      }
+    }
+
+    .modular_table_cell {
+      display: flex;
+      min-height: $height_large;
+      max-height: $height_xl;
+      flex: 1;
+      padding: $padding_extra_small;
+      margin-left: 0.5px;
+      overflow: auto;
+      text-align: center;
+      background: $color_white;
+      align-items: flex-start;
+      justify-content: center;
+
+      &.bottom_left_corner {
+        border-radius: 0 0 0 $border_radius_primary;
+      }
+
+      &.bottom_right_corner {
+        border-radius: 0 0 $border_radius_primary;
+      }
+
+      @include breakpoint(medium) {
+        align-items: center;
+      }
+
+      @include breakpoint(large) {
+        text-align: left;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      @include breakpoint(wide) {
+        text-align: left;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      span {
+        max-height: inherit;
+        padding: $padding_extra_small;
+      }
+    }
+  }
+}

@@ -81,7 +81,11 @@ rules:
   no-mergeable-selectors: 2
   no-misspelled-properties:
     - 2
-    - extra-properties: []
+    - extra-properties: [
+        container,
+        row-gap,
+        gap,
+      ]
   no-qualifying-elements:
     - 2
     - allow-element-with-attribute: false
@@ -99,6 +103,7 @@ rules:
     - 2
     - ignore-custom-properties: false
       order:
+        - container
         - position
         - top
         - right
@@ -133,6 +138,24 @@ rules:
         - margin-right
         - margin-bottom
         - margin-left
+        - gap
+        - row-gap
+        - column-gap
+        - grid
+        - grid-template-rows
+        - grid-auto-rows
+        - grid-row-start
+        - grid-row-end
+        - grid-template-columns
+        - grid-auto-columns
+        - grid-column-start
+        - grid-column-end
+        - grid-auto-flow
+        - grid-template
+        - grid-template-areas
+        - grid-template-rows
+        - grid-template-columns
+        - grid-area
         - overflow
         - overflow-x
         - overflow-y

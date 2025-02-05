@@ -1,0 +1,211 @@
+@import 'global/variables';
+@import 'global/breakpoints';
+@import 'mixins/ease_transition';
+
+.index_page {
+  display: flex;
+  min-height: 100vh;
+  flex: 1;
+  flex-direction: column;
+
+  @include breakpoint(large) {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  @include breakpoint(wide) {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .index_page_header_container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: $height_large;
+    min-height: $height_large;
+    margin: $margin_large $margin_medium $margin_medium;
+    background-color: $color_white;
+
+    @include breakpoint(large) {
+      position: unset;
+      height: $height_xxl;
+      min-height: $height_xxl;
+      margin: 0 $margin_large $margin_large;
+    }
+
+    @include breakpoint(wide) {
+      position: unset;
+      height: $height_xxl;
+      min-height: $height_xxl;
+      margin: 0 $margin_large $margin_large;
+    }
+  }
+
+  .index_page_body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+
+    @include breakpoint(wide) {
+      flex-direction: row;
+    }
+
+    .index_page_navigation_container {
+      position: fixed;
+      bottom: 0;
+      z-index: 100;
+      display: flex;
+      width: 100%;
+      min-width: 100%;
+      height: $height_xl;
+      border-top: $border_three;
+
+      @include breakpoint(large) {
+        position: unset;
+        bottom: unset;
+        width: 175px;
+        min-width: 175px;
+        height: unset;
+        min-height: 500px;
+        max-height: 500px;
+        margin: 0 $margin_extra_small $margin_large $margin_large;
+        border-top: 0;
+      }
+
+      @include breakpoint(wide) {
+        position: unset;
+        bottom: unset;
+        width: 175px;
+        min-width: 175px;
+        height: unset;
+        min-height: 500px;
+        max-height: 500px;
+        margin: 0 $margin_extra_small $margin_large $margin_large;
+        border-top: 0;
+      }
+
+      .index_page_navigation {
+        display: flex;
+        flex: 1;
+        margin: 0 $margin_extra_small;
+
+        @include breakpoint(large) {
+          height: 75%;
+          align-self: center;
+        }
+
+        @include breakpoint(wide) {
+          height: 75%;
+          align-self: center;
+        }
+      }
+    }
+
+    .address_section_email {
+      margin: 0 $margin_medium $margin_medium;
+
+      img {
+        width: 185px;
+        max-width: 185px;
+        height: 19px;
+        max-height: 19px;
+
+        @include breakpoint(medium) {
+          width: 335px;
+          max-width: 335px;
+          height: 30px;
+          max-height: 30px;
+        }
+
+        @include breakpoint(large) {
+          width: 335px;
+          max-width: 335px;
+          height: 30px;
+          max-height: 30px;
+        }
+
+        @include breakpoint(wide) {
+          width: 335px;
+          max-width: 335px;
+          height: 30px;
+          max-height: 30px;
+        }
+      }
+    }
+
+    .index_page_content_container {
+      flex: 1;
+      overflow: auto;
+
+      @include breakpoint(large) {
+        display: flex;
+      }
+
+      @include breakpoint(wide) {
+        display: flex;
+      }
+
+      .index_page_content {
+        display: flex;
+        flex: 1;
+        margin: 0 $margin_medium $margin_large;
+        border-radius: $border_radius_primary;
+
+        a {
+          text-decoration: none;
+        }
+
+        @include breakpoint(large) {
+          margin: 0 $margin_large $margin_large 0;
+        }
+
+        @include breakpoint(wide) {
+          margin: 0 $margin_large $margin_large 0;
+        }
+
+        .non_expandable_block_container {
+          @include ease_transition();
+          display: flex;
+          flex: 1;
+          border-radius: $border_radius_primary;
+
+          @include breakpoint(large) {
+            min-height: 500px;
+            max-height: 500px;
+            margin: 0 $margin_extra_small $margin_medium;
+          }
+
+          @include breakpoint(wide) {
+            min-height: 500px;
+            max-height: 500px;
+            margin: 0 $margin_small $margin_medium $margin_extra_small;
+          }
+        }
+      }
+    }
+  }
+
+  .index_page_footer_container {
+    display: flex;
+    min-height: $height_large;
+    margin: 0 $margin_small $margin_xl;
+
+
+    @include breakpoint(large) {
+      margin: 0 $margin_medium;
+    }
+
+    @include breakpoint(wide) {
+      margin: 0 $margin_medium;
+    }
+  }
+}

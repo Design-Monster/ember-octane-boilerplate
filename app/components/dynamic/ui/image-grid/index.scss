@@ -1,0 +1,39 @@
+@import 'global/variables';
+@import 'global/breakpoints';
+
+.image_grid {
+  display: grid;
+  margin: $margin_extra_small;
+  grid-auto-rows: 200px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-flow: dense;
+  grid-gap: $margin_extra_small;
+
+  @include breakpoint(large) {
+    margin: $margin_small;
+  }
+
+  @include breakpoint(wide) {
+    margin: $margin_small;
+  }
+
+  span {
+    display: flex;
+    flex: 1;
+
+    picture {
+      display: flex;
+      max-width: 100%;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+      }
+    }
+  }
+}

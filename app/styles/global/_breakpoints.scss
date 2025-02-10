@@ -18,12 +18,8 @@ $breakpoints: (
 		min: $md,
 		max: $xmd,
 	),
-	large: (  //800px-1167px
+	large: (  //800px-1167px+
 		min: $lg,
-		max: $xlg,
-	),
-	wide: (  //1168px+
-		min: $wide,
 		max: $xwide,
 	),
 );

@@ -1,52 +1,24 @@
-<Dynamic::Ui::Navigation::Skip-Link />
-<div local-class="index_page">
-  <header local-class="index_page_header_container">
-    <Dynamic::Ui::Header
-      @indexPage="true"
-    />
-  </header>
-  <div local-class="index_page_body">
-    <nav local-class="index_page_navigation_container">
-      <div local-class="index_page_navigation">
-      {{#if (or (media 'isSmall') (media 'isMedium'))}}
-      <Dynamic::Ui::Navigation::Mobile
-        @routeSlotOne={{this.indexRoute}}
-        @routeSlotTwo={{this.aboutRoute}}
-        @routeSlotThree={{this.contactRoute}}
-        @routeSlotFour={{this.servicesRoute}} />
-      {{else if (or (media 'isLarge') (media 'isWide'))}}
-      <Dynamic::Ui::Navigation::Desktop
-        @routeSlotOne={{this.indexRoute}}
-        @routeSlotTwo={{this.aboutRoute}}
-        @routeSlotThree={{this.contactRoute}}
-        @routeSlotFour={{this.servicesRoute}} />
-      {{/if}}
-      </div>
-    </nav>
-    {{#if (media 'isSmall')}}
-    <address local-class="address_section_email">
-      <picture>
-        <source
-          srcset=""
-          loading="eager"
-          alt="Camden Creative's Email Address"
-          type="image/webp">
-        <img
-          src=""
-          loading="eager"
-          alt="Camden Creative's Email Address">
-      </picture>
-    </address>
-    {{/if}}
-    <main local-class="index_page_content_container">
-      <div local-class="index_page_content">
-        <div local-class="non_expandable_block_container">
-
-        </div>
-      </div>
-    </main>
-  </div>
-  <footer local-class="index_page_footer_container">
+<Structural::Layout::HolyGrail>
+  <:primaryHeader>
+    <Dynamic::Ui::Header />
+  </:primaryHeader>
+  <:primaryNavigation>
+    <Dynamic::Ui::Navigation::Primary
+      @routeSlotOne={{this.indexRoute}}
+      @routeSlotTwo={{this.aboutRoute}}
+      @routeSlotThree={{this.contactRoute}}
+      @routeSlotFour={{this.servicesRoute}} />
+  </:primaryNavigation>
+  <:primarySidebar>
+    <Dynamic::Ui::Sidebar />
+  </:primarySidebar>
+  <:ad>
+    <Dynamic::Ui::Ad />
+  </:ad>
+  <:mainContent>
+    Hello
+  </:mainContent>
+  <:primaryFooter>
     <Dynamic::Ui::Footer />
-  </footer>
-</div>
+  </:primaryFooter>
+</Structural::Layout::HolyGrail>

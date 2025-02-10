@@ -4,6 +4,8 @@
 .footer {
   display: flex;
   flex: 1;
+  margin: $margin_extra_small;
+  align-items: end;
 
   .text_boxes_container {
     display: flex;

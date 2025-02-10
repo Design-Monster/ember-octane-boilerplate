@@ -28,7 +28,7 @@
     display: flex;
     height: $height_large;
     min-height: $height_large;
-    margin: $margin_large $margin_medium $margin_medium;
+    margin: $margin_medium;
     background-color: $color_white;
 
     @include breakpoint(large) {

@@ -10,6 +10,7 @@
   .header_content {
     display: flex;
     flex: 1;
+    margin: 0 $margin_extra_small;
     align-items: baseline;
 
     a {

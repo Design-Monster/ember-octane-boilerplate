@@ -1,0 +1,33 @@
+<Dynamic::Ui::Navigation::Skip-Link />
+<div local-class="route_page">
+  {{#if (has-block "primaryHeader")}}
+  <header local-class="primary_header_container">
+  {{yield to="primaryHeader"}}
+  </header>
+  {{/if}}
+  {{#if (has-block "primaryNavigation")}}
+  <nav local-class="primary_navigation_container">
+  {{yield to="primaryNavigation"}}
+  </nav>
+  {{/if}}
+  {{#if (has-block "primarySidebar")}}
+  <aside local-class="primary_sidebar_container">
+  {{yield to="primarySidebar"}}
+  </aside>
+  {{/if}}
+  {{#if (has-block "ad")}}
+  <div local-class="ad_container">
+  {{yield to="ad"}}
+  </div>
+  {{/if}}
+  {{#if (has-block "mainContent")}}
+  <article local-class="main_content_container">
+  {{yield to="mainContent"}}
+  </article>
+  {{/if}}
+  {{#if (has-block "primaryFooter")}}
+  <footer local-class="primary_footer_container">
+  {{yield to="primaryFooter"}}
+  </footer>
+  {{/if}}
+</div>

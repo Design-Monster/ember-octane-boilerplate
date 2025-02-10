@@ -1,31 +1,34 @@
 <div local-class="header">
   <div local-class="header_content">
-    <div local-class="text_container_one">
-      <nav>
-      <LinkTo @route='index' aria-label="Camden Creative banner - click to go to home page" local-class="{{unless @indexPage "hover_pointer"}}">
-      <span local-class="one">
-        Camden
-      </span>
-      <span local-class="two">
-        Creative
-      </span>
-      </LinkTo>
-      </nav>
-    </div>
+
     {{#if (or (media 'isMedium') (media 'isLarge') (media 'isWide'))}}
-    <address local-class="text_container_two" aria-label="Our Email">
+    <address local-class="text_container_one" aria-label="Our Email">
       <picture>
         <source
           srcset="/assets/images/camden-creative-email.png"
           loading="eager"
-          alt="Camden Creative's Email Address"
+          alt="Save the dam falls' Email Address"
           type="image/webp">
         <img
           src="/assets/images/camden-creative-email.png"
           loading="eager"
-          alt="Camden Creative's Email Address">
+          alt="Save the dam falls' Email Address">
       </picture>
     </address>
     {{/if}}
+
+    <div local-class="text_container_two">
+      <nav>
+      <LinkTo @route='index' aria-label="Camden Creative banner - click to go to home page" local-class="{{unless @indexPage "hover_pointer"}}">
+      <span local-class="one">
+        Save
+      </span>
+      <span local-class="two">
+        The Dam Falls
+      </span>
+      </LinkTo>
+      </nav>
+    </div>
+
   </div>
 </div>

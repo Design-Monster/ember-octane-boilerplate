@@ -1,26 +1,20 @@
+// sass-lint:disable function-name-format
+
 //breakpoints values
 $zero: 0;
-$sm: 33.99em;
-$md: 34em;
-$xmd: 49.99em;
-$lg: 50em;
-$xlg: 72.99em;
-$wide: 73em;
-$xwide: 2000em;
+$sm: 33.99em; //543.86px
+$lg: 34em; //800px
+$mega: 2000em;
 
 //breakpoints maps
 $breakpoints: (
-	small: (  //321-543px
+	small: (  //0-543px
 		min: $zero,
 		max: $sm,
 	),
-	medium: (  //544px-799px
-		min: $md,
-		max: $xmd,
-	),
-	large: (  //800px-1167px+
+	large: (  //800px-1167px
 		min: $lg,
-		max: $xwide,
+		max: $mega,
 	),
 );
 

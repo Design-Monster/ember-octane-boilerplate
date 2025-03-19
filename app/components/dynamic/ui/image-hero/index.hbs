@@ -1,36 +1,534 @@
-<span local-class="image_hero">
-  <span>
-    {{#if (media 'isSmall')}}
+<span local-class="image-hero">
+  {{#if (media 'isSmall')}}
+  <picture>
+    <source
+      media="(max-width: 320px)"
+      srcset={{@heroImageSmallScreensSrcsetOne}}
+    />
+    <source
+      media="(max-width: 330px)"
+      srcset={{@heroImageSmallScreensSrcsetTwo}}
+    />
+    <source
+      media="(max-width: 340px)"
+      srcset={{@heroImageSmallScreensSrcsetThree}}
+    />
+    <source
+      media="(max-width: 350px)"
+      srcset={{@heroImageSmallScreensSrcsetFour}}
+    />
+    <source
+      media="(max-width: 360px)"
+      srcset={{@heroImageSmallScreensSrcsetFive}}
+    />
+    <source
+      media="(max-width: 370px)"
+      srcset={{@heroImageSmallScreensSrcsetSix}}
+    />
+    <source
+      media="(max-width: 380px)"
+      srcset={{@heroImageSmallScreensSrcsetSeven}}
+    />
+    <source
+      media="(max-width: 390px)"
+      srcset={{@heroImageSmallScreensSrcsetEight}}
+    />
+    <source
+      media="(max-width: 400px)"
+      srcset={{@heroImageSmallScreensSrcsetNine}}
+    />
+    <source
+      media="(max-width: 410px)"
+      srcset={{@heroImageSmallScreensSrcsetTen}}
+    />
+    <source
+      media="(max-width: 420px)"
+      srcset={{@heroImageSmallScreensSrcsetEleven}}
+    />
+    <source
+      media="(max-width: 430px)"
+      srcset={{@heroImageSmallScreensSrcsetTwelve}}
+    />
+    <source
+      media="(max-width: 440px)"
+      srcset={{@heroImageSmallScreensSrcsetThirteen}}
+    />
+    <source
+      media="(max-width: 450px)"
+      srcset={{@heroImageSmallScreensSrcsetFourteen}}
+    />
+    <source
+      media="(max-width: 460px)"
+      srcset={{@heroImageSmallScreensSrcsetFifteen}}
+    />
+    <source
+      media="(max-width: 470px)"
+      srcset={{@heroImageSmallScreensSrcsetSixteen}}
+    />
+    <source
+      media="(max-width: 480px)"
+      srcset={{@heroImageSmallScreensSrcsetSeventeen}}
+    />
+    <source
+      media="(max-width: 490px)"
+      srcset={{@heroImageSmallScreensSrcsetEighteen}}
+    />
+    <source
+      media="(max-width: 500px)"
+      srcset={{@heroImageSmallScreensSrcsetNineteen}}
+    />
+    <source
+      media="(max-width: 510px)"
+      srcset={{@heroImageSmallScreensSrcsetTwenty}}
+    />
+    <source
+      media="(max-width: 520px)"
+      srcset={{@heroImageSmallScreensSrcsetTwentyOne}}
+    />
+    <source
+      media="(max-width: 530px)"
+      srcset={{@heroImageSmallScreensSrcsetTwentyTwo}}
+    />
+    <source
+      media="(max-width: 540px)"
+      srcset={{@heroImageSmallScreensSrcsetTwentyThree}}
+    />
+    <source
+      media="(max-width: 550px)"
+      srcset={{@heroImageSmallScreensSrcsetTwentyFour}}
+    />
     <img
-      src={{@imageOneSmallFallback}}
-      max-width="200px"
-      loading="lazy"
-      alt={{@imageOneAltLabel}}
-      srcset={{@imageOneSmallSrcset}}>
-    {{/if}}
-    {{#if (media 'isMedium')}}
+      src={{@heroImageSmallScreensFallback}}
+      alt={{@heroImageAltText}}
+    />
+  </picture>
+  {{/if}}
+  {{#if (media 'isLarge')}}
+  <picture>
+    <source
+      media="(max-width: 560px)"
+      srcset={{@heroImageLargeScreensSrcsetOne}}
+    />
+    <source
+      media="(max-width: 570px)"
+      srcset={{@heroImageLargeScreensSrcsetTwo}}
+    />
+    <source
+      media="(max-width: 580px)"
+      srcset={{@heroImageLargeScreensSrcsetThree}}
+    />
+    <source
+      media="(max-width: 590px)"
+      srcset={{@heroImageLargeScreensSrcsetFour}}
+    />
+    <source
+      media="(max-width: 600px)"
+      srcset={{@heroImageLargeScreensSrcsetFive}}
+    />
+    <source
+      media="(max-width: 610px)"
+      srcset={{@heroImageLargeScreensSrcsetSix}}
+    />
+    <source
+      media="(max-width: 620px)"
+      srcset={{@heroImageLargeScreensSrcsetSeven}}
+    />
+    <source
+      media="(max-width: 630px)"
+      srcset={{@heroImageLargeScreensSrcsetEight}}
+    />
+    <source
+      media="(max-width: 640px)"
+      srcset={{@heroImageLargeScreensSrcsetNine}}
+    />
+    <source
+      media="(max-width: 650px)"
+      srcset={{@heroImageLargeScreensSrcsetTen}}
+    />
+    <source
+      media="(max-width: 660px)"
+      srcset={{@heroImageLargeScreensSrcsetEleven}}
+    />
+    <source
+      media="(max-width: 670px)"
+      srcset={{@heroImageLargeScreensSrcsetTwelve}}
+    />
+    <source
+      media="(max-width: 680px)"
+      srcset={{@heroImageLargeScreensSrcsetThirteen}}
+    />
+    <source
+      media="(max-width: 690px)"
+      srcset={{@heroImageLargeScreensSrcsetFourteen}}
+    />
+    <source
+      media="(max-width: 700px)"
+      srcset={{@heroImageLargeScreensSrcsetFifteen}}
+    />
+    <source
+      media="(max-width: 710px)"
+      srcset={{@heroImageLargeScreensSrcsetSixteen}}
+    />
+    <source
+      media="(max-width: 720px)"
+      srcset={{@heroImageLargeScreensSrcsetSeventeen}}
+    />
+    <source
+      media="(max-width: 730px)"
+      srcset={{@heroImageLargeScreensSrcsetEighteen}}
+    />
+    <source
+      media="(max-width: 740px)"
+      srcset={{@heroImageLargeScreensSrcsetNineteen}}
+    />
+    <source
+      media="(max-width: 750px)"
+      srcset={{@heroImageLargeScreensSrcsetTwenty}}
+    />
+    <source
+      media="(max-width: 760px)"
+      srcset={{@heroImageLargeScreensSrcsetTwentyOne}}
+    />
+    <source
+      media="(max-width: 770px)"
+      srcset={{@heroImageLargeScreensSrcsetTwentyTwo}}
+    />
+    <source
+      media="(max-width: 780px)"
+      srcset={{@heroImageLargeScreensSrcsetTwentyThree}}
+    />
+    <source
+      media="(max-width: 790px)"
+      srcset={{@heroImageLargeScreensSrcsetTwentyFour}}
+    />
+    <source
+      media="(max-width: 800px)"
+      srcset={{@heroImageLargeScreensSrcsetTwentyFive}}
+    />
+    <source
+      media="(max-width: 810px)"
+      srcset={{@heroImageLargeScreensSrcsetTwentySix}}
+    />
+    <source
+      media="(max-width: 820px)"
+      srcset={{@heroImageLargeScreensSrcsetTwentySeven}}
+    />
+    <source
+      media="(max-width: 830px)"
+      srcset={{@heroImageLargeScreensSrcsetTwentyEight}}
+    />
+    <source
+      media="(max-width: 840px)"
+      srcset={{@heroImageLargeScreensSrcsetTwentyNine}}
+    />
+    <source
+      media="(max-width: 850px)"
+      srcset={{@heroImageLargeScreensSrcsetThirty}}
+    />
+    <source
+      media="(max-width: 860px)"
+      srcset={{@heroImageLargeScreensSrcsetThirtyOne}}
+    />
+    <source
+      media="(max-width: 870px)"
+      srcset={{@heroImageLargeScreensSrcsetThirtyTwo}}
+    />
+    <source
+      media="(max-width: 880px)"
+      srcset={{@heroImageLargeScreensSrcsetThirtyThree}}
+    />
+    <source
+      media="(max-width: 890px)"
+      srcset={{@heroImageLargeScreensSrcsetThirtyFour}}
+    />
+    <source
+      media="(max-width: 900px)"
+      srcset={{@heroImageLargeScreensSrcsetThirtyFive}}
+    />
+    <source
+      media="(max-width: 910px)"
+      srcset={{@heroImageLargeScreensSrcsetThirtySix}}
+    />
+    <source
+      media="(max-width: 920px)"
+      srcset={{@heroImageLargeScreensSrcsetThirtySeven}}
+    />
+    <source
+      media="(max-width: 930px)"
+      srcset={{@heroImageLargeScreensSrcsetThirtyEight}}
+    />
+    <source
+      media="(max-width: 940px)"
+      srcset={{@heroImageLargeScreensSrcsetThirtyNine}}
+    />
+    <source
+      media="(max-width: 950px)"
+      srcset={{@heroImageLargeScreensSrcsetForty}}
+    />
+    <source
+      media="(max-width: 960px)"
+      srcset={{@heroImageLargeScreensSrcsetFortyOne}}
+    />
+    <source
+      media="(max-width: 970px)"
+      srcset={{@heroImageLargeScreensSrcsetFortyTwo}}
+    />
+    <source
+      media="(max-width: 980px)"
+      srcset={{@heroImageLargeScreensSrcsetFortyThree}}
+    />
+    <source
+      media="(max-width: 990px)"
+      srcset={{@heroImageLargeScreensSrcsetFortyFour}}
+    />
+    <source
+      media="(max-width: 1000px)"
+      srcset={{@heroImageLargeScreensSrcsetFortyFive}}
+    />
+    <source
+      media="(max-width: 1010px)"
+      srcset={{@heroImageLargeScreensSrcsetFortySix}}
+    />
+    <source
+      media="(max-width: 1020px)"
+      srcset={{@heroImageLargeScreensSrcsetFortySeven}}
+    />
+    <source
+      media="(max-width: 1030px)"
+      srcset={{@heroImageLargeScreensSrcsetFortyEight}}
+    />
+    <source
+      media="(max-width: 1040px)"
+      srcset={{@heroImageLargeScreensSrcsetFortyNine}}
+    />
+    <source
+      media="(max-width: 1050px)"
+      srcset={{@heroImageLargeScreensSrcsetFifty}}
+    />
+    <source
+      media="(max-width: 1060px)"
+      srcset={{@heroImageLargeScreensSrcsetFiftyOne}}
+    />
+    <source
+      media="(max-width: 1070px)"
+      srcset={{@heroImageLargeScreensSrcsetFiftyTwo}}
+    />
+    <source
+      media="(max-width: 1080px)"
+      srcset={{@heroImageLargeScreensSrcsetFiftyThree}}
+    />
+    <source
+      media="(max-width: 1090px)"
+      srcset={{@heroImageLargeScreensSrcsetFiftyFour}}
+    />
+    <source
+      media="(max-width: 1100px)"
+      srcset={{@heroImageLargeScreensSrcsetFiftyFive}}
+    />
+    <source
+      media="(max-width: 1110px)"
+      srcset={{@heroImageLargeScreensSrcsetFiftySix}}
+    />
+    <source
+      media="(max-width: 1120px)"
+      srcset={{@heroImageLargeScreensSrcsetFiftySeven}}
+    />
+    <source
+      media="(max-width: 1130px)"
+      srcset={{@heroImageLargeScreensSrcsetFiftyEight}}
+    />
+    <source
+      media="(max-width: 1140px)"
+      srcset={{@heroImageLargeScreensSrcsetFiftyNine}}
+    />
+    <source
+      media="(max-width: 1150px)"
+      srcset={{@heroImageLargeScreensSrcsetSixty}}
+    />
+    <source
+      media="(max-width: 1160px)"
+      srcset={{@heroImageLargeScreensSrcsetSixtyOne}}
+    />
+    <source
+      media="(max-width: 1170px)"
+      srcset={{@heroImageLargeScreensSrcsetSixtyTwo}}
+    />
+    <source
+      media="(max-width: 1180px)"
+      srcset={{@heroImageLargeScreensSrcsetSixtyThree}}
+    />
+    <source
+      media="(max-width: 1190px)"
+      srcset={{@heroImageLargeScreensSrcsetSixtyFour}}
+    />
+    <source
+      media="(max-width: 1200px)"
+      srcset={{@heroImageLargeScreensSrcsetSixtyFive}}
+    />
+    <source
+      media="(max-width: 1210px)"
+      srcset={{@heroImageLargeScreensSrcsetSixtySix}}
+    />
+    <source
+      media="(max-width: 1220px)"
+      srcset={{@heroImageLargeScreensSrcsetSixtySeven}}
+    />
+    <source
+      media="(max-width: 1230px)"
+      srcset={{@heroImageLargeScreensSrcsetSixtyEight}}
+    />
+    <source
+      media="(max-width: 1240px)"
+      srcset={{@heroImageLargeScreensSrcsetSixtyNine}}
+    />
+    <source
+      media="(max-width: 1250px)"
+      srcset={{@heroImageLargeScreensSrcsetSeventy}}
+    />
+    <source
+      media="(max-width: 1260px)"
+      srcset={{@heroImageLargeScreensSrcsetSeventyOne}}
+    />
+    <source
+      media="(max-width: 1270px)"
+      srcset={{@heroImageLargeScreensSrcsetSeventyTwo}}
+    />
+    <source
+      media="(max-width: 1280px)"
+      srcset={{@heroImageLargeScreensSrcsetSeventyThree}}
+    />
+    <source
+      media="(max-width: 1290px)"
+      srcset={{@heroImageLargeScreensSrcsetSeventyFour}}
+    />
+    <source
+      media="(max-width: 1300px)"
+      srcset={{@heroImageLargeScreensSrcsetSeventyFive}}
+    />
+    <source
+      media="(max-width: 1310px)"
+      srcset={{@heroImageLargeScreensSrcsetSeventySix}}
+    />
+    <source
+      media="(max-width: 1320px)"
+      srcset={{@heroImageLargeScreensSrcsetSeventySeven}}
+    />
+    <source
+      media="(max-width: 1330px)"
+      srcset={{@heroImageLargeScreensSrcsetSeventyEight}}
+    />
+    <source
+      media="(max-width: 1340px)"
+      srcset={{@heroImageLargeScreensSrcsetSeventyNine}}
+    />
+    <source
+      media="(max-width: 1350px)"
+      srcset={{@heroImageLargeScreensSrcsetEighty}}
+    />
+    <source
+      media="(max-width: 1360px)"
+      srcset={{@heroImageLargeScreensSrcsetEightyOne}}
+    />
+    <source
+      media="(max-width: 1370px)"
+      srcset={{@heroImageLargeScreensSrcsetEightyTwo}}
+    />
+    <source
+      media="(max-width: 1380px)"
+      srcset={{@heroImageLargeScreensSrcsetEightyThree}}
+    />
+    <source
+      media="(max-width: 1390px)"
+      srcset={{@heroImageLargeScreensSrcsetEightyFour}}
+    />
+    <source
+      media="(max-width: 1400px)"
+      srcset={{@heroImageLargeScreensSrcsetEightyFive}}
+    />
+    <source
+      media="(max-width: 1410px)"
+      srcset={{@heroImageLargeScreensSrcsetEightySix}}
+    />
+    <source
+      media="(max-width: 1420px)"
+      srcset={{@heroImageLargeScreensSrcsetEightySeven}}
+    />
+    <source
+      media="(max-width: 1430px)"
+      srcset={{@heroImageLargeScreensSrcsetEightyEight}}
+    />
+    <source
+      media="(max-width: 1440px)"
+      srcset={{@heroImageLargeScreensSrcsetEightyNine}}
+    />
+    <source
+      media="(max-width: 1450px)"
+      srcset={{@heroImageLargeScreensSrcsetNinety}}
+    />
+    <source
+      media="(max-width: 1460px)"
+      srcset={{@heroImageLargeScreensSrcsetNinetyOne}}
+    />
+    <source
+      media="(max-width: 1470px)"
+      srcset={{@heroImageLargeScreensSrcsetNinetyTwo}}
+    />
+    <source
+      media="(max-width: 1480px)"
+      srcset={{@heroImageLargeScreensSrcsetNinetyThree}}
+    />
+    <source
+      media="(max-width: 1490px)"
+      srcset={{@heroImageLargeScreensSrcsetNinetyFour}}
+    />
+    <source
+      media="(max-width: 1500px)"
+      srcset={{@heroImageLargeScreensSrcsetNinetyFive}}
+    />
+    <source
+      media="(max-width: 1510px)"
+      srcset={{@heroImageLargeScreensSrcsetNinetySix}}
+    />
+    <source
+      media="(max-width: 1520px)"
+      srcset={{@heroImageLargeScreensSrcsetNinetySeven}}
+    />
+    <source
+      media="(max-width: 1530px)"
+      srcset={{@heroImageLargeScreensSrcsetNinetyEight}}
+    />
+    <source
+      media="(max-width: 1540px)"
+      srcset={{@heroImageLargeScreensSrcsetNinetyNine}}
+    />
+    <source
+      media="(max-width: 1550px)"
+      srcset={{@heroImageLargeScreensSrcsetOneHundred}}
+    />
+    <source
+      media="(max-width: 1560px)"
+      srcset={{@heroImageLargeScreensSrcsetOneHundredAndOne}}
+    />
+    <source
+      media="(max-width: 1570px)"
+      srcset={{@heroImageLargeScreensSrcsetOneHundredAndTwo}}
+    />
+    <source
+      media="(max-width: 1580px)"
+      srcset={{@heroImageLargeScreensSrcsetOneHundredAndThree}}
+    />
+    <source
+      media="(max-width: 1590px)"
+      srcset={{@heroImageLargeScreensSrcsetOneHundredAndFour}}
+    />
+    <source
+      media="(min-width: 1591px)"
+      srcset={{@heroImageLargeScreensSrcsetOneHundredAndFive}}
+    />
     <img
-      src={{@imageOneMediumFallback}}
-      max-width="400px"
-      loading="lazy"
-      alt={{@imageOneAltLabel}}
-      srcset={{@imageOneMediumSrcset}}>
-    {{/if}}
-    {{#if (media 'isLarge')}}
-    <img
-      src={{@imageOneLargeFallback}}
-      max-width="600px"
-      loading="lazy"
-      alt={{@imageOneAltLabel}}
-      srcset={{@imageOneLargeSrcset}}>
-    {{/if}}
-    {{#if (media 'isWide')}}
-    <img
-      src={{@imageOneWideFallback}}
-      max-width="600px"
-      loading="lazy"
-      alt={{@imageOneAltLabel}}
-      srcset={{@imageOneWideSrcset}}>
-    {{/if}}
-  </span>
+      src={{@heroImageLargeScreensFallback}}
+      alt={{@heroImageAltText}}
+    />
+  </picture>
+  {{/if}}
 </span>

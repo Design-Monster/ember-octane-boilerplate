@@ -1,33 +1,29 @@
-@import 'mixins/ease_transition';
+@import "mixins/ease_transition";
 
-.skip_link {
-  @include ease_transition();
+.skip-link {
+  @include ease-transition;
+
   position: absolute;
   z-index: -10;
   display: flex;
   min-width: 150px;
-  min-height: $height_medium;
-  max-height: $height_medium;
-  margin: $margin_extra_small 0 0 $margin_medium;
-  font-size: $font_size_medium;
+  min-height: $height-medium;
+  max-height: $height-medium;
+  margin: $margin-extra-small 0 0 $margin-medium;
+  font-size: $font-size-medium;
   text-decoration: none;
 
   @include breakpoint(large) {
-    margin: $margin_extra_small 0 0 $margin_large;
-  }
-
-  @include breakpoint(wide) {
-    margin: $margin_extra_small 0 0 $margin_large;
+    margin: $margin-extra-small 0 0 $margin-large;
   }
 
   p {
-    margin-block-start: 0;
-    margin-block-end: 0;
+    margin-block: 0;
 
-    &.center_text {
+    &.center-text {
       flex: 1;
-      padding: 0 $padding_small;
-      color: $color_white;
+      padding: 0 $padding-small;
+      color: $color-white;
       text-align: center;
       align-self: center;
     }
@@ -35,8 +31,8 @@
 
   &:focus {
     z-index: 20;
-    height: $height_medium;
-    background: $color_yellow_primary;
+    height: $height-medium;
+    background: $color-blue-primary;
     transform: translateZ(-100px) perspective(100px);
   }
 

@@ -1,0 +1,27 @@
+.triple-block-display {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  gap: $gap-extra-small;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+
+  @include breakpoint(large) {
+    gap: $gap-medium;
+    grid-template-rows: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .block-container {
+    display: flex;
+    flex-direction: column;
+    container-name: content-container;
+    container-type: inline-size;
+    overflow: auto;
+    word-wrap: break-word;
+    border-radius: $border-radius-primary;
+
+    &.bordered {
+      border: $border-two;
+    }
+  }
+}

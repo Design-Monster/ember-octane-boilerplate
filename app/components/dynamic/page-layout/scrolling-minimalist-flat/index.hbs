@@ -1,0 +1,25 @@
+{{!-- import SkipLink from './dynamic/ui/navigation/skip-link'; --}}
+
+<Dynamic::Ui::Navigation::Skip-Link />
+<div local-class="route-page">
+  {{#if (has-block "primaryHeader")}}
+  <header local-class="primary-header-container">
+  {{yield to="primaryHeader"}}
+  </header>
+  {{/if}}
+  {{#if (has-block "primaryNavigation")}}
+  <nav local-class="primary-navigation-container">
+  {{yield to="primaryNavigation"}}
+  </nav>
+  {{/if}}
+  {{#if (has-block "mainContent")}}
+  <article local-class="main-content-container">
+  {{yield to="mainContent"}}
+  </article>
+  {{/if}}
+  {{#if (has-block "primaryFooter")}}
+  <footer local-class="primary-footer-container">
+  {{yield to="primaryFooter"}}
+  </footer>
+  {{/if}}
+</div>

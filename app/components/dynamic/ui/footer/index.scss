@@ -1,19 +1,19 @@
-@import 'global/variables';
-@import 'global/breakpoints';
+@import "global/variables";
+@import "global/breakpoints";
 
 .footer {
   display: flex;
   flex: 1;
-  margin: $margin_extra_small;
+  margin: $margin-extra-small;
   align-items: end;
 
-  .text_boxes_container {
+  .text-boxes-container {
     display: flex;
     flex: 1;
     justify-content: space-between;
 
-    .text_box_one {
-      padding-right: $padding_medium;
+    .text-box-one {
+      padding-right: $padding-medium;
     }
   }
 }

@@ -1,0 +1,89 @@
+@import 'global/variables';
+@import 'global/breakpoints';
+@import 'mixins/ease_transition';
+
+// .route_page {
+//   display: grid;
+//   min-height: 100vh;
+//   gap: $gap_medium;
+//   grid-template-columns: repeat(12, [col-start] 1fr);
+//   overflow: auto;
+
+//   .primary_header_container {
+//     position: sticky;
+//     display: flex;
+//     height: $height_large;
+//     min-height: $height_large;
+//     max-height: $height_large;
+//     grid-column: col-start / span 12;
+
+//     @include breakpoint(large) {
+//       height: $height_xl;
+//       min-height: $height_xl;
+//       max-height: $height_xl;
+//     }
+//   }
+
+//   .primary_navigation_container {
+//     position: fixed;
+//     bottom: 0;
+//     z-index: 100;
+//     display: flex;
+//     width: 100%;
+//     min-height: $height_large;
+
+//     @include breakpoint(large) {
+//       position: unset;
+//       bottom: unset;
+//       grid-column: col-start / span 2;
+//       grid-row: 2 / 4;
+//     }
+//   }
+
+//   .primary_sidebar_container {
+//     display: flex;
+//     grid-column: col-start / span 12;
+//     grid-row: 4;
+
+//     @include breakpoint(large) {
+//       grid-column: col-start 11 / span 2;
+//       grid-row: 2;
+//     }
+//   }
+
+//   .ad_container {
+//     display: flex;
+//     min-height: $height_large;
+//     grid-column: col-start / span 12;
+
+//     @include breakpoint(large) {
+//       grid-column: col-start 11 / span 2;
+//       }
+//   }
+
+//   .main_content_container {
+//     display: grid;
+//     grid-column: col-start / span 12;
+
+//     @include breakpoint(large) {
+//       grid-column: col-start 3 / span 8;
+//       grid-row: 2 / 4;
+//     }
+//   }
+
+//   .primary_footer_container {
+//     display: flex;
+//     height: $height_large;
+//     min-height: $height_large;
+//     max-height: $height_large;
+//     margin: auto 0 $margin_large;
+//     grid-column: col-start / span 12;
+
+//     @include breakpoint(large) {
+//       height: $height_xl;
+//       min-height: $height_xl;
+//       max-height: $height_xl;
+//       margin-bottom: unset;
+//     }
+//   }
+// }

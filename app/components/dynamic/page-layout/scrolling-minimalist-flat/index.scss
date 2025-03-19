@@ -1,0 +1,68 @@
+@import "global/variables";
+@import "global/breakpoints";
+@import "mixins/ease_transition";
+
+.route-page {
+  @include ease-transition;
+
+  display: grid;
+  min-height: 100vh;
+  gap: $gap-medium;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  overflow: auto;
+
+  .primary-header-container {
+    position: sticky;
+    display: flex;
+    height: $height-large;
+    min-height: $height-large;
+    max-height: $height-large;
+    flex-direction: column;
+    grid-column: col-start / span 12;
+
+    @include breakpoint(large) {
+      height: $height-xl;
+      min-height: $height-xl;
+      max-height: $height-xl;
+    }
+  }
+
+  .primary-navigation-container {
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    min-height: $height-large;
+    grid-column: col-start / span 12;
+
+    @include breakpoint(large) {
+      position: relative;
+      bottom: unset;
+      grid-column: col-start 5 / span 8;
+    }
+  }
+
+  .main-content-container {
+    display: grid;
+    grid-column: col-start / span 12;
+    grid-row: 3 / 12;
+  }
+
+  .primary-footer-container {
+    display: flex;
+    height: $height-large;
+    min-height: $height-large;
+    max-height: $height-large;
+    margin: auto 0 $margin-large;
+    grid-column: col-start / span 12;
+    grid-row: 12;
+
+    @include breakpoint(large) {
+      height: $height-xl;
+      min-height: $height-xl;
+      max-height: $height-xl;
+      margin-bottom: unset;
+    }
+  }
+}

@@ -1,20 +1,16 @@
-@import 'global/variables';
-@import 'global/breakpoints';
+@import "global/variables";
+@import "global/breakpoints";
 
-.nav_menu_container {
+.nav-menu-container {
   display: flex;
   flex: 1;
-  background-color: $color_white;
+  background-color: $color-blue-secondary;
   align-items: center;
   justify-content: center;
 
-  @include breakpoint(large) {
-    flex-direction: column;
-  }
-
-  .nav_item_container {
+  .nav-item-container {
     display: flex;
-    min-height: $height_large;
+    min-height: $height-large;
     flex: 1;
     align-items: center;
 
@@ -22,32 +18,32 @@
       transform: scale(1.075);
     }
 
-    .nav_link {
+    .nav-link {
       display: flex;
       flex: 1;
-      color: $font_color_primary;
+      color: $font-color-regular;
       text-decoration: none;
 
       &:visited {
-        color: $font_color_primary;
+        color: $font-color-regular;
       }
 
       &:global(.active) {
-        height: $height_large;
-        color: $font_color_primary;
-        background-color: $color_yellow_primary;
+        height: $height-large;
+        color: $font-color-inverse;
+        background-color: $color-blue-primary;
       }
     }
 
-    .nav_item {
+    .nav-item {
       display: flex;
       flex: 1;
-      margin: $margin_extra_small;
+      margin: $margin-extra-small;
 
-      .nav_item_text {
+      .nav-item-text {
         display: flex;
         flex: 1;
-        font-size: $font_size_medium;
+        font-size: $font-size-medium;
         justify-content: center;
         align-items: center;
       }

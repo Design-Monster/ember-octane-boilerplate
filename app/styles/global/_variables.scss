@@ -1,90 +1,77 @@
-//Sizes
-$size_extra_small: 0.390625rem; //6.25px
-$size_small: 0.78125rem; //12.5px
-$size_medium: 1.5625rem; //25px
-$size_extra_medium: 2.344rem; //37.5px
-$size_large: 3.125rem; //50px
-$size_xl: 4.6875rem; //75px
-$size_xxl: 6.25rem; //100px
+// Sizes
+$size-extra-small: 0.3906rem; // 6.25px
+$size-small: 0.7812rem; // 12.5px
+$size-medium: 1.5625rem; // 25px
+$size-extra-medium: 2.344rem; // 37.5px
+$size-large: 3.125rem; // 50px
+$size-xl: 4.6875rem; // 75px
+$size-xxl: 6.25rem; // 100px
 
-//Colors
-$color_white: #ffffff;
-$color_black: #000000;
-$color_yellow_primary: #debf04;
-$color_blue_primary: #03259e;
-$color_yellow_secondary: darken($color_yellow_primary, 10%);
-$color_black_overlay: lighten($color_black, 15%);
-$color_charcoal: #36454f;
-$color_light_grey: #f0f0f0;
+// Colors
+$color-white: white;
+$color-black: black;
+$color-blue-primary: #03259e;
+$color-blue-secondary: lighten($color-blue-primary, 68%);
+$color-black-overlay: lighten($color-black, 15%);
+$color-charcoal: #36454f;
+$color-light-grey: #f0f0f0;
 
-//Borders
-$border_one: solid 6px $color_yellow_primary;
-$border_two: solid 1px $color_yellow_primary;
-$border_three: solid 0.8px $color_yellow_primary;
-$border_four: solid 2px $color_yellow_primary;
-$border_five: solid 0.5px $color_yellow_primary;
+// Gaps
+$gap-extra-small: $size-extra-small;
+$gap-small: $size-small;
+$gap-medium: $size-medium;
+$gap-large: $size-large;
+$gap-xl: $size-xl;
+$gap-xxl: $size-xxl;
 
-//Borders Radius
-$border_radius_primary: 0.5em;
-$border_radius_secondary: 0.25em;
+// Margins
+$margin-extra-small: $size-extra-small;
+$margin-small: $size-small;
+$margin-medium: $size-medium;
+$margin-large: $size-large;
+$margin-xl: $size-xl;
+$margin-xxl: $size-xxl;
 
-//Gaps
-$gap_extra_small: $size_extra_small;
-$gap_small: $size_small;
-$gap_medium: $size_medium;
-$gap_large: $size_large;
-$gap_xl: $size_xl;
-$gap_xxl: $size_xxl;
+// Padding
+$padding-extra-small: $size-extra-small;
+$padding-small: $size-small;
+$padding-medium: $size-medium;
+$padding-large: $size-large;
 
-//Margins
-$margin_extra_small: $size_extra_small;
-$margin_small: $size_small;
-$margin_medium: $size_medium;
-$margin_large: $size_large;
-$margin_xl: $size_xl;
-$margin_xxl: $size_xxl;
+// Heights
+$height-medium: $size-medium;
+$height-extra-medium: $size-extra-medium;
+$height-large: $size-large;
+$height-xl: $size-xl;
+$height-xxl: $size-xxl;
 
-//Padding
-$padding_extra_small: $size_extra_small;
-$padding_small: $size_small;
-$padding_medium: $size_medium;
-$padding_large: $size_large;
+// font-sizes
+$font-size-tiny: clamp(0.5em, 0.5em, 0.8749em); // 8px-11.99px
+$font-size-small: clamp(0.875em, 0.875em, 0.99em); // 12px-15.99px
+$font-size-regular: clamp(1em, 1em, 1.1249em); // 16px-17.99px
+$font-size-medium: clamp(1.125em, 1.125em, 1.3749em); // 18px-21.99px
+$font-size-extra-medium: clamp(1.375em, 1.375em, 1.49em); // 22px-23.99px
+$font-size-large: clamp(1.5em, 1.5em, 1.8749em); // 24px-29.99px
+$font-size-xl: clamp(1.875em, 1.875em, 2.49em); // 30px-39.99px
+$font-size-xxl: clamp(2.5em, 2.5em, 3em); // 40px-48px
 
-//Heights
-$height_medium: $size_medium;
-$height_extra_medium: $size_extra_medium;
-$height_large: $size_large;
-$height_xl: $size_xl;
-$height_xxl: $size_xxl;
+// font colors
+$font-color-regular: $color-black;
+$font-color-inverse: $color-white;
+$font-color-primary: $color-blue-primary;
+$font-color-secondary: $color-blue-primary;
+$font-color-charcoal: $color-charcoal;
 
-//font-sizes
-$font_size_tiny: clamp(0.5em, 0.5em, 0.8749em); //8px-11.99px
-$font_size_small: clamp(0.875em, 0.875em, 0.99em); //12px-15.99px
-$font_size_regular: clamp(1em, 1em, 1.1249em); //16px-17.99px
-$font_size_medium: clamp(1.125em, 1.125em, 1.3749em); //18px-21.99px
-$font_size_extra_medium: clamp(1.375em, 1.375em, 1.49em); //22px-23.99px
-$font_size_large: clamp(1.5em, 1.5em, 1.8749em);  //24px-29.99px
-$font_size_xl: clamp(1.875em, 1.875em, 2.49em); //30px-39.99px
-$font_size_xxl: clamp(2.5em, 2.5em, 3em); //40px-48px
+// box-shadow
+$box-shadow-primary: 1px 4px 6px $color-blue-primary;
+$box-shadow-focused: 1px 4px 6px $color-blue-secondary;
+$box-shadow-disabled: 1px 4px 6px $color-charcoal;
 
-//font colors
-$font_color_regular: $color_black;
-$font_color_inverse: $color_white;
-$font_color_primary: $color_blue_primary;
-$font_color_secondary: $color_yellow_primary;
-$font_color_charcoal: $color_charcoal;
+// Borders
+$border-one: solid 6px $color-blue-primary;
+$border-two: solid 2px $color-blue-primary;
+$border-three: solid 0.8px $color-charcoal;
 
-//box-shadow
-$box_shadow_primary: 1px 4px 6px $color_yellow_primary;
-$box_shadow_focused: 1px 4px 6px $color_yellow_secondary;
-$box_shadow_disabled: 1px 4px 6px $color_charcoal;
-
-//background-url
-$background_url_index_mobile: '/assets/images/condoInsideFour.jpeg';
-$background_url_index_tablet: '/assets/images/condoInsideFour.jpeg';
-$background_url_index_large: '/assets/images/condoInsideFour.jpeg';
-$background_url_index_wide: '/assets/images/condoInsideFour.jpeg';
-$background_url_wrong_url_mobile: '/assets/images/condoInsideFour.jpeg';
-$background_url_wrong_url_tablet: '/assets/images/condoInsideFour.jpeg';
-$background_url_wrong_url_large: '/assets/images/condoInsideFour.jpeg';
-$background_url_wrong_url_wide: '/assets/images/condoInsideFour.jpeg';
+// Borders Radius
+$border-radius-primary: 0.5em;
+$border-radius-secondary: 0.25em;

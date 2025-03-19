@@ -1,0 +1,17 @@
+<span local-class="triple-block-display">
+  {{#if (has-block "firstBlock")}}
+  <span local-class="block-container {{if @firstBlockIsBordered "bordered"}}">
+  {{yield to="firstBlock"}}
+  </span>
+  {{/if}}
+  {{#if (has-block "secondBlock")}}
+  <span local-class="block-container {{if @secondBlockIsBordered "bordered"}}">
+  {{yield to="secondBlock"}}
+  </span>
+  {{/if}}
+  {{#if (has-block "thirdBlock")}}
+  <span local-class="block-container {{if @thirdBlockIsBordered "bordered"}}">
+  {{yield to="thirdBlock"}}
+  </span>
+  {{/if}}
+</span>

@@ -1,0 +1,43 @@
+@import "global/variables";
+@import "global/breakpoints";
+@import "mixins/ease_transition";
+
+.address-container {
+  margin: $margin_small $margin-extra-small 0;
+
+  picture {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+
+    img {
+      width: 185px;
+      max-width: 185px;
+      height: 19px;
+      max-height: 19px;
+    }
+  }
+}
+
+.block-title {
+  margin: $margin-small $margin-small 0;
+  font-size: $font-size-medium;
+  color: $font-color-primary;
+  text-align: center;
+}
+
+p {
+  margin: $margin-small;
+}
+
+@container content-container (max-width: 200px) {
+  .title {
+    font-size: $font-size-tiny;
+  }
+
+  p {
+    font-size: $font-size-small;
+  }
+}

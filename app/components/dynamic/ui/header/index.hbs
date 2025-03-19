@@ -1,34 +1,18 @@
 <div local-class="header">
-  <div local-class="header_content">
-
-    {{#if (or (media 'isMedium') (media 'isLarge') (media 'isWide'))}}
-    <address local-class="text_container_one" aria-label="Our Email">
-      <picture>
-        <source
-          srcset="/assets/images/camden-creative-email.png"
-          loading="eager"
-          alt="Save the dam falls' Email Address"
-          type="image/webp">
-        <img
-          src="/assets/images/camden-creative-email.png"
-          loading="eager"
-          alt="Save the dam falls' Email Address">
-      </picture>
-    </address>
-    {{/if}}
-
-    <div local-class="text_container_two">
+  <span local-class="header-content">
+    <span local-class="text-container-two">
       <nav>
-      <LinkTo @route='index' aria-label="Camden Creative banner - click to go to home page" local-class="{{unless @indexPage "hover_pointer"}}">
+      <LinkTo @route='index' aria-label="Camden Creative banner - click to go to home page" local-class="{{unless @indexPage "hover-pointer"}}">
       <span local-class="one">
-        Save
-      </span>
-      <span local-class="two">
-        The Dam Falls
+        Save The Dam Falls
       </span>
       </LinkTo>
       </nav>
-    </div>
-
-  </div>
+    </span>
+  </span>
+</div>
+<div local-class="sub-header">
+  <span local-class="text-container-one">
+    Montgomery Dam, Camden Harbor
+  </span>
 </div>
